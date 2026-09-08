@@ -8,7 +8,7 @@ window.PICKEM_DATA = {
   "participants": 51,
   "prizePool": 2550,
   "lastUpdated": "Sep 8, 2026",
-  "formUrl": "",
+  "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc5NjlGMQWySpFZMO10hzKL--gBHxmYmhJyQTmMjhrN_nL9fw/viewform?usp=header",
   "standings": [
     [
       1,
