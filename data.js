@@ -9,7 +9,7 @@ window.PICKEM_DATA = {
   "prizePool": 2550,
   "lastUpdated": "Sep 8, 2026",
   "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc5NjlGMQWySpFZMO10hzKL--gBHxmYmhJyQTmMjhrN_nL9fw/viewform",
-  "publicPicksCsvUrl": "",
+  "publicPicksCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5Bj_O_kIA6RnxYPMb8HpMR1PzpnxX1hksqc89NGrCB9_Fji-c7tcBGT6EgUemFMDdNhSpuBFxcLy/pub?gid=203662858&single=true&output=csv",
   "standings": [
     [1,"Eric Nilsson",7,1,1,"—"],
     [2,"Andrew Carson",6,0,1,"—"],[2,"Andrew Lichty",6,0,1,"—"],[2,"Bryan Pandajis",6,0,1,"—"],[2,"Dan Ubilla",6,0,1,"—"],[2,"Hamilton Evans",6,0,1,"—"],[2,"Michael Badlam Jr",6,0,1,"—"],
