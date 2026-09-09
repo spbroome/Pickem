@@ -9,7 +9,7 @@ window.PICKEM_DATA = {
   "prizePool": 2550,
   "lastUpdated": "Sep 8, 2026",
   "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc5NjlGMQWySpFZMO10hzKL--gBHxmYmhJyQTmMjhrN_nL9fw/viewform",
-  "publicFeedCsvUrl": "",
+  "publicFeedCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5Bj_O_kIA6RnxYPMb8HpMR1PzpnxX1hksqc89NGrCB9_Fji-c7tcBGT6EgUemFMDdNhSpuBFxcLy/pub?gid=1826739676&single=true&output=csv",
   "standings": [
     [
       1,
