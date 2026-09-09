@@ -1,172 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>2026 College Football Pick 'Em HQ</title>
-  <style>
-    :root{
-      --bg:#f4f7fb; --card:#fff; --text:#111827; --muted:#64748b;
-      --line:#e2e8f0; --good:#166534;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-    .shell{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
-    .hero{background:linear-gradient(135deg,#111827,#3730a3);color:#fff;border-radius:20px;padding:28px 30px;box-shadow:0 12px 30px rgba(15,23,42,.15)}
-    .eyebrow{text-transform:uppercase;letter-spacing:.11em;font-size:12px;opacity:.75;font-weight:700}
-    h1{margin:7px 0 6px;font-size:34px}
-    .sub{opacity:.85;margin:0}
-    .cta{display:inline-block;margin-top:20px;background:#fff;color:#312e81;text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:700}
-    .cta.hidden{display:none}
-    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}
-    .stat,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 14px rgba(15,23,42,.04)}
-    .stat{padding:18px}
-    .stat .label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
-    .stat .value{font-size:28px;font-weight:800;margin-top:6px}
-    .card{padding:20px;margin-top:16px}
-    .card h2{font-size:20px;margin:0}
-    .section-head{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-bottom:14px}
-    .section-note{color:var(--muted);font-size:12px}
-    .two-col{display:grid;grid-template-columns:1.65fr 1fr;gap:16px}
-    .table-wrap{overflow-x:auto}
-    table{width:100%;border-collapse:collapse}
-    th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:9px 8px;border-bottom:1px solid var(--line);background:#fff}
-    td{padding:10px 8px;border-bottom:1px solid #eef2f7}
-    .rank{font-weight:800;width:58px}
-    .leader{font-weight:800;color:var(--good)}
-    .search{width:100%;max-width:270px;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:14px}
-    .analytics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .analytic{padding:14px;border:1px solid var(--line);border-radius:12px}
-    .analytic strong{display:block;font-size:18px;margin:4px 0}
-    .analytic small{color:var(--muted)}
-    .footer{color:var(--muted);font-size:12px;text-align:center;margin-top:22px}
-    @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.search{max-width:none}}
-    @media(max-width:520px){.grid{grid-template-columns:1fr}h1{font-size:28px}.hero{padding:22px}.analytics{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026 College Football Pick 'Em HQ</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--text:#111827;--muted:#64748b;--line:#e2e8f0;--good:#166534;--purple:#3730a3;--lock:#f1f5f9}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}.shell{max-width:1180px;margin:0 auto;padding:28px 18px 56px}.hero{background:linear-gradient(135deg,#111827,#3730a3);color:#fff;border-radius:20px;padding:28px 30px}.eyebrow{text-transform:uppercase;letter-spacing:.11em;font-size:12px;opacity:.75;font-weight:700}h1{margin:7px 0 6px;font-size:34px}.sub{opacity:.85;margin:0}.cta{display:inline-block;margin-top:20px;background:#fff;color:#312e81;text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:700}.cta.hidden{display:none}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.stat,.card,.game-card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 14px rgba(15,23,42,.04)}.stat{padding:18px}.stat .label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}.stat .value{font-size:28px;font-weight:800;margin-top:6px}.card{padding:20px;margin-top:16px}.card h2{font-size:20px;margin:0}.section-head{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-bottom:14px}.section-note{color:var(--muted);font-size:12px}.live-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.game-card{padding:16px}.game-top{display:flex;justify-content:space-between;gap:12px}.game-title{font-weight:800}.kickoff{font-size:12px;color:var(--muted);white-space:nowrap}.locked-box{background:var(--lock);border-radius:10px;padding:12px;margin-top:10px;color:var(--muted);font-size:13px}.sides{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.side{border:1px solid var(--line);border-radius:10px;padding:10px}.side strong{display:block}.side small{color:var(--muted)}details{margin-top:8px}summary{cursor:pointer;color:var(--purple);font-weight:700;font-size:13px}.names{font-size:12px;color:var(--muted);line-height:1.45;margin-top:6px}.my-card{display:grid;grid-template-columns:280px 1fr;gap:16px}.select,.search{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 11px;font-size:14px;background:#fff}.revealed-pick{padding:10px 0;border-bottom:1px solid #eef2f7}.revealed-pick strong{display:block}.revealed-pick small{color:var(--muted)}.two-col{display:grid;grid-template-columns:1.65fr 1fr;gap:16px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:9px 8px;border-bottom:1px solid var(--line);background:#fff}td{padding:10px 8px;border-bottom:1px solid #eef2f7}.rank{font-weight:800;width:58px}.leader{font-weight:800;color:var(--good)}.analytics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.analytic{padding:14px;border:1px solid var(--line);border-radius:12px}.analytic strong{display:block;font-size:18px;margin:4px 0}.analytic small{color:var(--muted)}.footer{color:var(--muted);font-size:12px;text-align:center;margin-top:22px}.warn{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:12px;padding:12px;font-size:13px;margin-bottom:12px}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.two-col,.my-card{grid-template-columns:1fr}.live-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.grid{grid-template-columns:1fr}h1{font-size:28px}.hero{padding:22px}.analytics,.sides{grid-template-columns:1fr}}
+</style>
 </head>
-<body>
-<main class="shell">
-  <section class="hero">
-    <div class="eyebrow"><span id="edition"></span> • Week <span id="weekHero"></span></div>
-    <h1 id="siteTitle"></h1>
-    <p class="sub">Standings, weekly results, title races and entirely unnecessary data.</p>
-    <a id="pickButton" class="cta hidden" href="#" target="_blank">Make Week <span id="weekButton"></span> Picks →</a>
-  </section>
-
-  <section class="grid">
-    <div class="stat"><div class="label">Weekly Winner</div><div id="winner" class="value">—</div></div>
-    <div class="stat"><div class="label">Winning Score</div><div id="winnerScore" class="value">—</div></div>
-    <div class="stat"><div class="label">Submitted</div><div id="submitted" class="value">—</div></div>
-    <div class="stat"><div class="label">Prize Pool</div><div id="prizePool" class="value">—</div></div>
-  </section>
-
-  <section class="two-col">
-    <div class="card">
-      <div class="section-head">
-        <div>
-          <h2>Overall Standings</h2>
-          <div class="section-note">All <span id="standingsCount">0</span> participants</div>
-        </div>
-        <input id="standingsSearch" class="search" type="search" placeholder="Find a player…" autocomplete="off">
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead>
-          <tbody id="standingsBody"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <div>
-      <div class="card">
-        <div class="section-head">
-          <div><h2>First Quarter Title</h2><div class="section-note">Top 10 shown</div></div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Rank</th><th>Player</th><th>Score</th></tr></thead>
-            <tbody id="firstQuarterBody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="section-head"><h2>By the Numbers</h2></div>
-        <div id="analytics" class="analytics"></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="footer">Last updated: <span id="lastUpdated">—</span></div>
-</main>
-
+<body><main class="shell">
+<section class="hero"><div class="eyebrow"><span id="edition"></span> • Week <span id="weekHero"></span></div><h1 id="siteTitle"></h1><p class="sub">Standings, live pool action and entirely unnecessary data.</p><a id="pickButton" class="cta hidden" href="#" target="_blank">Make Week <span id="weekButton"></span> Picks →</a></section>
+<section class="grid"><div class="stat"><div class="label">Last Weekly Winner</div><div id="winner" class="value">—</div></div><div class="stat"><div class="label">Winning Score</div><div id="winnerScore" class="value">—</div></div><div class="stat"><div class="label">Last Week Submitted</div><div id="submitted" class="value">—</div></div><div class="stat"><div class="label">Prize Pool</div><div id="prizePool" class="value">—</div></div></section>
+<section class="card"><div class="section-head"><div><h2>Week 2 — Pool Action</h2><div class="section-note">Selections appear only after that game's kickoff.</div></div></div><div id="publicFeedWarning" class="warn" style="display:none">Live pick feed is not connected yet. Publish the <strong>Public Picks</strong> tab as CSV and add its URL to data.js.</div><div id="gamesGrid" class="live-grid"></div></section>
+<section class="card"><div class="section-head"><div><h2>Find My Card</h2><div class="section-note">Your picks reveal here as each selected game kicks off.</div></div></div><div class="my-card"><select id="playerSelect" class="select"><option value="">Choose a player…</option></select><div id="myCardResults"><div class="locked-box">Choose your name to see your revealed selections.</div></div></div></section>
+<section class="two-col"><div class="card"><div class="section-head"><div><h2>Overall Standings</h2><div class="section-note">All <span id="standingsCount">0</span> participants</div></div><input id="standingsSearch" class="search" type="search" placeholder="Find a player…"></div><div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead><tbody id="standingsBody"></tbody></table></div></div><div><div class="card"><div class="section-head"><div><h2>First Quarter Title</h2><div class="section-note">Top 10 shown</div></div></div><div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th></tr></thead><tbody id="firstQuarterBody"></tbody></table></div></div><div class="card"><div class="section-head"><h2>By the Numbers</h2></div><div id="analytics" class="analytics"></div></div></div></section>
+<div class="footer">Last updated: <span id="lastUpdated">—</span></div></main>
 <script src="data.js"></script>
 <script>
-(function(){
-  const data = window.PICKEM_DATA || {};
-  let allStandings = data.standings || [];
-
-  const text=(id,v)=>document.getElementById(id).textContent=v;
-  const money=v=>"$"+Number(v||0).toLocaleString("en-US");
-  const esc=v=>String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
-
-  text("edition", data.edition || "");
-  text("siteTitle", data.title || "2026 College Football Pick 'Em HQ");
-  text("weekHero", data.currentWeek || "—");
-  text("weekButton", data.currentWeek || "—");
-  text("winner", data.weekWinner || "—");
-  text("winnerScore", data.weekWinnerScore ? data.weekWinnerScore+"-0":"—");
-  text("submitted", (data.submitted||0)+" / "+(data.participants||0));
-  text("prizePool", money(data.prizePool||0));
-  text("lastUpdated", data.lastUpdated || "—");
-  text("standingsCount", allStandings.length);
-
-  const btn=document.getElementById("pickButton");
-  if(data.formUrl){ btn.href=data.formUrl; btn.classList.remove("hidden"); }
-
-  function renderStandings(rows){
-    const body=document.getElementById("standingsBody"); body.innerHTML="";
-    rows.forEach((r,i)=>{
-      const rank=r[0]||(i+1), tr=document.createElement("tr");
-      tr.innerHTML='<td class="rank">'+esc(rank)+'</td>'+
-        '<td class="'+(String(rank)==="1"?"leader":"")+'">'+esc(r[1]||"")+'</td>'+
-        '<td>'+esc(r[2]||"")+'</td>'+
-        '<td>'+esc(r[3]||"")+'</td>'+
-        '<td>'+esc(r[5]||"")+'</td>';
-      body.appendChild(tr);
-    });
-    if(!rows.length) body.innerHTML='<tr><td colspan="5">No matching players.</td></tr>';
-  }
-
-  function renderFirstQuarter(rows){
-    const body=document.getElementById("firstQuarterBody"); body.innerHTML="";
-    rows.slice(0,10).forEach((r,i)=>{
-      const rank=r[0]||(i+1), tr=document.createElement("tr");
-      tr.innerHTML='<td class="rank">'+esc(rank)+'</td>'+
-        '<td class="'+(String(rank)==="1"?"leader":"")+'">'+esc(r[1]||"")+'</td>'+
-        '<td>'+esc(r[2]||"")+'</td>';
-      body.appendChild(tr);
-    });
-  }
-
-  function renderAnalytics(items){
-    const el=document.getElementById("analytics"); el.innerHTML="";
-    (items||[]).slice(0,8).forEach(a=>{
-      const d=document.createElement("div"); d.className="analytic";
-      d.innerHTML='<small>'+esc(a.metric||"")+'</small><strong>'+esc(a.value||"")+'</strong><small>'+esc(a.detail||"")+'</small>';
-      el.appendChild(d);
-    });
-  }
-
-  renderStandings(allStandings);
-  renderFirstQuarter(data.firstQuarter||[]);
-  renderAnalytics(data.analytics||[]);
-
-  document.getElementById("standingsSearch").addEventListener("input", function(){
-    const q=this.value.trim().toLowerCase();
-    renderStandings(!q?allStandings:allStandings.filter(r=>String(r[1]||"").toLowerCase().includes(q)));
-  });
+(async function(){const data=window.PICKEM_DATA||{},allStandings=data.standings||[],games=data.weekGames||[];let publicRows=[];const text=(id,v)=>document.getElementById(id).textContent=v;const money=v=>"$"+Number(v||0).toLocaleString("en-US");const esc=v=>String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");const fmtDate=iso=>new Intl.DateTimeFormat("en-US",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/New_York"}).format(new Date(iso))+" ET";text("edition",data.edition||"");text("siteTitle",data.title||"Pick 'Em HQ");text("weekHero",data.currentWeek||"—");text("weekButton",data.currentWeek||"—");text("winner",data.weekWinner||"—");text("winnerScore",data.weekWinnerScore?data.weekWinnerScore+"-0":"—");text("submitted",(data.submitted||0)+" / "+(data.participants||0));text("prizePool",money(data.prizePool||0));text("lastUpdated",data.lastUpdated||"—");text("standingsCount",allStandings.length);const btn=document.getElementById("pickButton");if(data.formUrl){btn.href=data.formUrl;btn.classList.remove("hidden");}
+function renderStandings(rows){const body=document.getElementById("standingsBody");body.innerHTML="";rows.forEach((r,i)=>{const rank=r[0]||(i+1),tr=document.createElement("tr");tr.innerHTML='<td class="rank">'+esc(rank)+'</td><td class="'+(String(rank)==="1"?"leader":"")+'">'+esc(r[1]||"")+'</td><td>'+esc(r[2]||"")+'</td><td>'+esc(r[3]||"")+'</td><td>'+esc(r[5]||"")+'</td>';body.appendChild(tr);});if(!rows.length)body.innerHTML='<tr><td colspan="5">No matching players.</td></tr>';}
+function renderFirstQuarter(rows){const body=document.getElementById("firstQuarterBody");body.innerHTML="";rows.slice(0,10).forEach((r,i)=>{const rank=r[0]||(i+1),tr=document.createElement("tr");tr.innerHTML='<td class="rank">'+esc(rank)+'</td><td class="'+(String(rank)==="1"?"leader":"")+'">'+esc(r[1]||"")+'</td><td>'+esc(r[2]||"")+'</td>';body.appendChild(tr);});}
+function renderAnalytics(items){const el=document.getElementById("analytics");el.innerHTML="";(items||[]).slice(0,8).forEach(a=>{const d=document.createElement("div");d.className="analytic";d.innerHTML='<small>'+esc(a.metric||"")+'</small><strong>'+esc(a.value||"")+'</strong><small>'+esc(a.detail||"")+'</small>';el.appendChild(d);});}
+renderStandings(allStandings);renderFirstQuarter(data.firstQuarter||[]);renderAnalytics(data.analytics||[]);document.getElementById("standingsSearch").addEventListener("input",function(){const q=this.value.trim().toLowerCase();renderStandings(!q?allStandings:allStandings.filter(r=>String(r[1]||"").toLowerCase().includes(q)));});const select=document.getElementById("playerSelect");allStandings.map(r=>r[1]).sort((a,b)=>a.localeCompare(b)).forEach(name=>{const o=document.createElement("option");o.value=name;o.textContent=name;select.appendChild(o);});select.addEventListener("change",()=>renderMyCard(select.value));if(data.publicPicksCsvUrl){try{publicRows=await loadCsv(data.publicPicksCsvUrl);}catch(e){document.getElementById("publicFeedWarning").style.display="block";}}else document.getElementById("publicFeedWarning").style.display="block";renderGames();renderMyCard("");
+function renderGames(){const grid=document.getElementById("gamesGrid");grid.innerHTML="";const now=new Date();games.forEach(g=>{const started=now>=new Date(g.kickoff),rows=publicRows.filter(r=>r["Game Key"]===g.gameKey),card=document.createElement("div");card.className="game-card";let html='<div class="game-top"><div class="game-title">'+esc(g.matchup)+'</div><div class="kickoff">'+esc(fmtDate(g.kickoff))+'</div></div>';if(!started)html+='<div class="locked-box">🔒 Picks hidden until kickoff.</div>';else if(!rows.length)html+='<div class="locked-box">Kickoff has passed — picks should reveal on the next refresh.</div>';else{const a=rows.filter(r=>r.Selection===g.optionA),b=rows.filter(r=>r.Selection===g.optionB);html+='<div class="sides">'+sideHtml(g.optionA,a)+sideHtml(g.optionB,b)+'</div>';}card.innerHTML=html;grid.appendChild(card);});}
+function sideHtml(label,rows){const names=rows.map(r=>r.Player).sort((a,b)=>a.localeCompare(b));return '<div class="side"><strong>'+esc(label)+'</strong><small>'+rows.length+' pick'+(rows.length===1?'':'s')+'</small><details><summary>See names</summary><div class="names">'+(names.length?names.map(esc).join("<br>"):"None")+'</div></details></div>';}
+function renderMyCard(player){const el=document.getElementById("myCardResults");if(!player){el.innerHTML='<div class="locked-box">Choose your name to see your revealed selections.</div>';return;}const rows=publicRows.filter(r=>r.Player===player);let html='<div class="section-note">'+rows.length+' of 7 selections revealed</div>';rows.forEach(r=>{html+='<div class="revealed-pick"><strong>'+esc(r.Selection)+'</strong><small>'+esc(r["Kickoff ET"]||"")+'</small></div>';});if(rows.length<7)html+='<div class="locked-box">🔒 '+(7-rows.length)+' remaining selection'+((7-rows.length)===1?'':'s')+' hidden until kickoff.</div>';el.innerHTML=html;}
+async function loadCsv(url){const res=await fetch(url,{cache:"no-store"});if(!res.ok)throw new Error("CSV fetch failed");const txt=await res.text(),rows=parseCsv(txt);if(!rows.length)return[];const headers=rows[0];return rows.slice(1).filter(r=>r.some(Boolean)).map(r=>{const o={};headers.forEach((h,i)=>o[h]=r[i]||"");return o;});}
+function parseCsv(text){const rows=[];let row=[],field="",quoted=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c==='"'&&quoted&&n==='"'){field+='"';i++;}else if(c==='"')quoted=!quoted;else if(c===','&&!quoted){row.push(field);field="";}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&n==='\n')i++;row.push(field);rows.push(row);row=[];field="";}else field+=c;}if(field.length||row.length){row.push(field);rows.push(row);}return rows;}
 })();
-</script>
-</body>
-</html>
+</script></body></html>
