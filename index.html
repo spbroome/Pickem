@@ -125,7 +125,7 @@
 
     const next=feed.find(r=>r["Record Type"]==="META"&&r.Detail==="NEXT_LOCK");
     if(next){
-      $("nextLock").textContent=fmtShort(next["Kickoff ET"]);
+      $("nextLock").textContent=fmtShort(next.Value || next["Kickoff ET"]);
       $("nextLockDetail").textContent=next.Matchup||"";
     }else{
       $("nextLock").textContent="All locked";
