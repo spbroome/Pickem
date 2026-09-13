@@ -19,7 +19,7 @@
 .game-summary{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:12px 14px;cursor:pointer}.game-name{font-weight:800}.game-time,.action-count{font-size:12px;color:var(--muted);white-space:nowrap}.action-count{font-weight:700}.game-detail{padding:0 14px 14px}
 .sides{display:grid;grid-template-columns:1fr 1fr;gap:10px}.side{border:1px solid var(--line);border-radius:10px;padding:10px}.side strong{display:block}.pct{font-size:20px;font-weight:800}.names{font-size:12px;color:var(--muted);line-height:1.45;margin-top:6px}
 .two-col{display:grid;grid-template-columns:1.65fr 1fr;gap:16px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:9px 8px;border-bottom:1px solid var(--line)}td{padding:10px 8px;border-bottom:1px solid #eef2f7}.rank{font-weight:800;width:58px}.leader{font-weight:800;color:var(--good)}.up{color:var(--good);font-weight:700}.down{color:var(--bad);font-weight:700}
-.fun-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.fun{padding:14px;border:1px solid var(--line);border-radius:12px}.fun strong{display:block;font-size:18px;margin:4px 0}.fun small{color:var(--muted)}.perfect-list{line-height:1.6;font-size:14px}.footer{color:var(--muted);font-size:12px;text-align:center;margin-top:22px}
+.fun-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.recap-card{padding:14px;border:1px solid var(--line);border-radius:12px}.recap-card strong{display:block;font-size:18px;margin:4px 0}.recap-card small{color:var(--muted)}.fun{padding:14px;border:1px solid var(--line);border-radius:12px}.fun strong{display:block;font-size:18px;margin:4px 0}.fun small{color:var(--muted)}.perfect-list{line-height:1.6;font-size:14px}.footer{color:var(--muted);font-size:12px;text-align:center;margin-top:22px}
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.two-col,.my-card{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.search{max-width:none}.game-summary{grid-template-columns:1fr}.game-time,.action-count{white-space:normal}}
 @media(max-width:520px){.grid,.fun-grid,.sides{grid-template-columns:1fr}h1{font-size:28px}.hero{padding:22px}}
 </style>
@@ -53,7 +53,39 @@
   <div id="poolAction"></div>
 </section>
 
-<section class="two-col">
+<section id="preWeekRecap" class="two-col">
+  <div class="card">
+    <div class="section-head">
+      <div>
+        <h2>Week 2 Hangover</h2>
+        <div class="section-note">Something to look at while Week 3 waits for us to make bad decisions.</div>
+      </div>
+    </div>
+    <div id="week2Hangover" class="fun-grid"></div>
+  </div>
+  <div>
+    <div class="card">
+      <div class="section-head">
+        <div>
+          <h2>First Quarter Race</h2>
+          <div class="section-note">Two weeks remain in the opening mini-title.</div>
+        </div>
+      </div>
+      <div id="titleRaceRecap" class="perfect-list"></div>
+    </div>
+    <div class="card">
+      <div class="section-head">
+        <div>
+          <h2>Week 2 Scoreboard</h2>
+          <div class="section-note">The great middle class was alive and well.</div>
+        </div>
+      </div>
+      <div id="week2Distribution" class="perfect-list"></div>
+    </div>
+  </div>
+</section>
+
+<section id="liveWeekSection" class="two-col hidden">
   <div class="card">
     <div class="section-head"><div><h2>Live Weekly Leaderboard</h2><div class="section-note">Correct, losses, pending and maximum possible.</div></div></div>
     <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Record</th><th>Pending</th><th>Max</th></tr></thead><tbody id="weeklyBody"></tbody></table></div>
@@ -103,7 +135,7 @@
   renderStandings(standings); renderFirstQuarter();
 
   if(d.publicFeedCsvUrl){try{feed=await loadCsv(d.publicFeedCsvUrl);}catch(e){console.error(e);}}
-  renderTop(); renderMyCard(""); renderPoolAction(); renderWeekly(); renderPerfect(); renderFun();
+  renderTop(); renderMyCard(""); renderPoolAction(); renderMode(); renderWeekly(); renderPerfect(); renderFun(); renderPreviousWeekRecap();
 
   function currentRows(type){return feed.filter(r=>r["Record Type"]===type&&Number(r.Week)===Number(d.currentWeek));}
 
@@ -121,8 +153,61 @@
     if(form&&form.Value){$("pickButton").href=form.Value;$("pickButton").classList.remove("hidden");}
 
     const w=parseWeekly();
-    if(w.length){const x=w[0];$("liveLeader").textContent=x.player;$("liveLeaderDetail").textContent=x.correct+"-"+x.losses+" • "+x.pending+" pending";}
-    else{$("liveLeader").textContent=d.lastWinner||"Eric Wood";$("liveLeaderDetail").textContent="Last winner: "+(d.lastWinnerScore||"6-1");}
+    const hasFinal=currentRows("RESULT").length>0;
+    const leaderLabel=$("liveLeader").closest(".stat").querySelector(".label");
+    if(hasFinal && w.length){
+      leaderLabel.textContent="Live Weekly Leader";
+      const x=w[0];
+      $("liveLeader").textContent=x.player;
+      $("liveLeaderDetail").textContent=x.correct+"-"+x.losses+" • "+x.pending+" pending";
+    }else{
+      leaderLabel.textContent="Last Week's Winner";
+      $("liveLeader").textContent=(d.previousWeekRecap&&d.previousWeekRecap.winner)||d.lastWinner||"Eric Wood";
+      $("liveLeaderDetail").textContent=((d.previousWeekRecap&&d.previousWeekRecap.winnerScore)||d.lastWinnerScore||"6-1")+" in Week 2";
+    }
+  }
+
+  function renderMode(){
+    const hasFinal=currentRows("RESULT").length>0;
+    $("preWeekRecap").classList.toggle("hidden",hasFinal);
+    $("liveWeekSection").classList.toggle("hidden",!hasFinal);
+  }
+
+  function renderPreviousWeekRecap(){
+    const r=d.previousWeekRecap||{};
+    const hang=$("week2Hangover");
+    if(hang){
+      const cards=[
+        ["Pool Killer",r.poolKiller],
+        ["Pool Hero",r.poolHero],
+        ["Biggest Mover",r.biggestMover],
+        ["Pool ATS",r.poolAts],
+        ["Contrarian Card",r.contrarian],
+        ["Chalk Merchant",r.chalk]
+      ];
+      hang.innerHTML=cards.map(([label,x])=>{
+        x=x||{};
+        return '<div class="recap-card"><small>'+esc(label)+'</small><strong>'+esc(x.title||"—")+'</strong><small>'+esc(x.detail||"")+'</small></div>';
+      }).join("");
+    }
+
+    const race=$("titleRaceRecap");
+    if(race){
+      const t=r.titleRace||{}, leaders=t.leaders||[], one=t.oneBack||[];
+      let html="";
+      leaders.forEach(x=>{html+='<strong>T1: '+esc(x.player)+' — '+esc(x.score)+'</strong><br>';});
+      if(one.length) html+='<br><span><strong>'+one.length+' players one back at 10:</strong><br>'+one.map(esc).join(", ")+'</span>';
+      html+='<br><br><span>'+esc(t.weeksRemaining||2)+' weeks remain.</span>';
+      race.innerHTML=html;
+    }
+
+    const dist=$("week2Distribution");
+    if(dist){
+      const s=r.scoreDistribution||{};
+      const order=["6-1","5-2","4-3","3-4","2-5","1-6"];
+      dist.innerHTML=order.map(k=>'<strong>'+esc(k)+':</strong> '+esc(s[k]||0)+' player'+((s[k]||0)===1?'':'s')).join("<br>")+
+        '<br><br><span>'+esc(r.submission||"")+'</span>';
+    }
   }
 
   function renderMyCard(player){

@@ -785,5 +785,63 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "matchup": "UTSA at #1 Texas"
     }
   ],
-  "lastUpdated": "Sep 13, 2026"
+  "lastUpdated": "Sep 13, 2026",
+  "previousWeekRecap": {
+    "week": 2,
+    "winner": "Eric Wood",
+    "winnerScore": "6-1",
+    "poolKiller": {
+      "title": "Oklahoma -5.5",
+      "detail": "33 casualties after Michigan won 17-10"
+    },
+    "poolHero": {
+      "title": "Georgia -40.5",
+      "detail": "20 winners in Georgia's 70-20 cover"
+    },
+    "biggestMover": {
+      "title": "Andrew Davis ↑21",
+      "detail": "T36 to T16 in one week"
+    },
+    "poolAts": {
+      "title": "183-174",
+      "detail": "51.3% ATS in Week 2"
+    },
+    "contrarian": {
+      "title": "David Lasky",
+      "detail": "Average pick popularity: 7.1"
+    },
+    "chalk": {
+      "title": "Eric Nilsson",
+      "detail": "Average pick popularity: 19.3"
+    },
+    "scoreDistribution": {
+      "6-1": 1,
+      "5-2": 8,
+      "4-3": 22,
+      "3-4": 10,
+      "2-5": 9,
+      "1-6": 1
+    },
+    "submission": "51 / 51 cards received",
+    "titleRace": {
+      "leaders": [
+        {
+          "player": "Eric Nilsson",
+          "score": 11
+        },
+        {
+          "player": "Hamilton Evans",
+          "score": 11
+        }
+      ],
+      "oneBack": [
+        "Bryan Pandajis",
+        "Dan Ubilla",
+        "Eric Wood",
+        "John Martin",
+        "Michael Badlam Jr"
+      ],
+      "weeksRemaining": 2
+    }
+  }
 });
