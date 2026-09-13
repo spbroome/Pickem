@@ -1,202 +1,214 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>2026 College Football Pick 'Em HQ</title>
-  <style>
-    :root{--bg:#f4f7fb;--card:#fff;--text:#111827;--muted:#64748b;--line:#e2e8f0;--good:#166534;--purple:#3730a3;--soft:#f1f5f9}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-    .shell{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
-    .hero{background:linear-gradient(135deg,#111827,#3730a3);color:#fff;border-radius:20px;padding:28px 30px;box-shadow:0 12px 30px rgba(15,23,42,.15)}
-    .eyebrow{text-transform:uppercase;letter-spacing:.11em;font-size:12px;opacity:.75;font-weight:700}
-    h1{margin:7px 0 6px;font-size:34px}.sub{opacity:.85;margin:0}
-    .cta{display:inline-block;margin-top:20px;background:#fff;color:#312e81;text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:700}.hidden{display:none!important}
-    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}
-    .stat,.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 14px rgba(15,23,42,.04)}
-    .stat{padding:18px}.stat .label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}.stat .value{font-size:25px;font-weight:800;margin-top:6px}.stat .detail{font-size:12px;color:var(--muted);margin-top:4px}
-    .card{padding:20px;margin-top:16px}.card h2{font-size:20px;margin:0}
-    .section-head{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-bottom:14px}.section-note{color:var(--muted);font-size:12px}
-    .my-card{display:grid;grid-template-columns:280px 1fr;gap:16px}.select,.search{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 11px;font-size:14px;background:#fff}
-    .card-summary{font-weight:700;margin-bottom:8px}.slot{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #eef2f7}.slot:last-child{border-bottom:none}.slot small{color:var(--muted)}
-    .locked{background:var(--soft);color:var(--muted);border-radius:9px;padding:9px 10px}
-    .window{margin-top:16px}.window:first-child{margin-top:0}.window h3{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:#475569}
-    .game-row{border:1px solid var(--line);border-radius:12px;margin-bottom:8px;background:#fff;overflow:hidden}
-    .game-summary{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:12px 14px;cursor:pointer}
-    .game-name{font-weight:800}.game-time,.action-count{font-size:12px;color:var(--muted);white-space:nowrap}.action-count{font-weight:700}
-    .game-detail{padding:0 14px 14px}
-    .locked-line{background:var(--soft);padding:10px;border-radius:9px;color:var(--muted);font-size:13px}
-    .sides{display:grid;grid-template-columns:1fr 1fr;gap:10px}.side{border:1px solid var(--line);border-radius:10px;padding:10px}.side strong{display:block}.pct{font-size:20px;font-weight:800}.names{font-size:12px;color:var(--muted);line-height:1.45;margin-top:6px}
-    .two-col{display:grid;grid-template-columns:1.65fr 1fr;gap:16px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:9px 8px;border-bottom:1px solid var(--line)}td{padding:10px 8px;border-bottom:1px solid #eef2f7}.rank{font-weight:800;width:58px}.leader{font-weight:800;color:var(--good)}.match{background:#eef2ff}
-    .analytics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.analytic{padding:14px;border:1px solid var(--line);border-radius:12px}.analytic strong{display:block;font-size:18px;margin:4px 0}.analytic small{color:var(--muted)}
-    .warn{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:12px;padding:12px;font-size:13px;margin-bottom:12px}
-    .footer{color:var(--muted);font-size:12px;text-align:center;margin-top:22px}
-    @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.two-col,.my-card{grid-template-columns:1fr}.game-summary{grid-template-columns:1fr}.game-time,.action-count{white-space:normal}.section-head{align-items:flex-start;flex-direction:column}}
-    @media(max-width:520px){.grid{grid-template-columns:1fr}h1{font-size:28px}.hero{padding:22px}.analytics,.sides{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026 College Football Pick 'Em HQ</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--text:#111827;--muted:#64748b;--line:#e2e8f0;--good:#166534;--bad:#b91c1c;--purple:#3730a3;--soft:#f1f5f9}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+.shell{max-width:1180px;margin:0 auto;padding:28px 18px 56px}.hero{background:linear-gradient(135deg,#111827,#3730a3);color:#fff;border-radius:20px;padding:28px 30px;box-shadow:0 12px 30px rgba(15,23,42,.15)}
+.eyebrow{text-transform:uppercase;letter-spacing:.11em;font-size:12px;opacity:.75;font-weight:700}h1{margin:7px 0 6px;font-size:34px}.sub{opacity:.85;margin:0}
+.cta{display:inline-block;margin-top:20px;background:#fff;color:#312e81;text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:700}.hidden{display:none!important}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.stat,.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 14px rgba(15,23,42,.04)}
+.stat{padding:18px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}.value{font-size:25px;font-weight:800;margin-top:6px}.detail{font-size:12px;color:var(--muted);margin-top:4px}
+.card{padding:20px;margin-top:16px}.card h2{font-size:20px;margin:0}.section-head{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-bottom:14px}.section-note{color:var(--muted);font-size:12px}
+.my-card{display:grid;grid-template-columns:280px 1fr;gap:16px}.select,.search{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 11px;font-size:14px;background:#fff}
+.locked{background:var(--soft);color:var(--muted);border-radius:9px;padding:10px}.slot{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #eef2f7}.slot:last-child{border-bottom:none}.slot small{color:var(--muted)}
+.window{margin-top:16px}.window:first-child{margin-top:0}.window h3{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:#475569}.game-row{border:1px solid var(--line);border-radius:12px;margin-bottom:8px;background:#fff;overflow:hidden}
+.game-summary{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:12px 14px;cursor:pointer}.game-name{font-weight:800}.game-time,.action-count{font-size:12px;color:var(--muted);white-space:nowrap}.action-count{font-weight:700}.game-detail{padding:0 14px 14px}
+.sides{display:grid;grid-template-columns:1fr 1fr;gap:10px}.side{border:1px solid var(--line);border-radius:10px;padding:10px}.side strong{display:block}.pct{font-size:20px;font-weight:800}.names{font-size:12px;color:var(--muted);line-height:1.45;margin-top:6px}
+.two-col{display:grid;grid-template-columns:1.65fr 1fr;gap:16px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:9px 8px;border-bottom:1px solid var(--line)}td{padding:10px 8px;border-bottom:1px solid #eef2f7}.rank{font-weight:800;width:58px}.leader{font-weight:800;color:var(--good)}.up{color:var(--good);font-weight:700}.down{color:var(--bad);font-weight:700}
+.fun-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.fun{padding:14px;border:1px solid var(--line);border-radius:12px}.fun strong{display:block;font-size:18px;margin:4px 0}.fun small{color:var(--muted)}.perfect-list{line-height:1.6;font-size:14px}.footer{color:var(--muted);font-size:12px;text-align:center;margin-top:22px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.two-col,.my-card{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.search{max-width:none}.game-summary{grid-template-columns:1fr}.game-time,.action-count{white-space:normal}}
+@media(max-width:520px){.grid,.fun-grid,.sides{grid-template-columns:1fr}h1{font-size:28px}.hero{padding:22px}}
+</style>
 </head>
 <body>
 <main class="shell">
-  <section class="hero">
-    <div class="eyebrow"><span id="edition"></span> • Week <span id="weekHero"></span></div>
-    <h1 id="siteTitle"></h1>
-    <p class="sub">Standings, live pool action and entirely unnecessary data.</p>
-    <a id="pickButton" class="cta hidden" target="_blank">Make Week <span id="weekButton"></span> Picks →</a>
-  </section>
+<section class="hero">
+  <div class="eyebrow"><span id="edition"></span> • Week <span id="weekHero"></span></div>
+  <h1 id="siteTitle"></h1>
+  <p class="sub">Standings, live pool action and entirely unnecessary data.</p>
+  <a id="pickButton" class="cta hidden" target="_blank">Make Week <span id="weekButton"></span> Picks →</a>
+</section>
 
-  <section class="grid">
-    <div class="stat"><div class="label">Week 2 Submitted</div><div id="weekSubmitted" class="value">—</div><div class="detail">valid cards received</div></div>
-    <div class="stat"><div class="label">Next Lock</div><div id="nextLock" class="value">—</div><div id="nextLockDetail" class="detail">—</div></div>
-    <div class="stat"><div class="label">Last Winner</div><div id="winner" class="value">—</div><div id="winnerDetail" class="detail">—</div></div>
-    <div class="stat"><div class="label">Prize Pool</div><div id="prizePool" class="value">—</div><div class="detail">society retains some standards</div></div>
-  </section>
+<section class="grid">
+  <div class="stat"><div class="label">Week <span class="wk"></span> Submitted</div><div class="value" id="submitted">0 / 51</div><div class="detail">valid cards received</div></div>
+  <div class="stat"><div class="label">Next Lock</div><div class="value" id="nextLock">—</div><div class="detail" id="nextLockDetail">—</div></div>
+  <div class="stat"><div class="label">Live Weekly Leader</div><div class="value" id="liveLeader">—</div><div class="detail" id="liveLeaderDetail">Last winner: Eric Wood 6-1</div></div>
+  <div class="stat"><div class="label">Prize Pool</div><div class="value" id="prizePool">—</div><div class="detail">society retains some standards</div></div>
+</section>
 
-  <section class="card">
-    <div class="section-head"><div><h2>Find My Card</h2><div class="section-note">Confirm your card is in. Picks reveal only after kickoff.</div></div></div>
-    <div class="my-card">
-      <select id="playerSelect" class="select"><option value="">Choose a player…</option></select>
-      <div id="myCardResults"><div class="locked">Choose your name to check your Week 2 card.</div></div>
-    </div>
-  </section>
+<section class="card">
+  <div class="section-head"><div><h2>Find My Card</h2><div class="section-note">Confirm your card is in. Picks reveal only after kickoff.</div></div></div>
+  <div class="my-card">
+    <select id="playerSelect" class="select"><option value="">Choose a player…</option></select>
+    <div id="myCardResults"><div class="locked">Choose your name to check your Week 3 card.</div></div>
+  </div>
+</section>
 
-  <section class="card">
-    <div class="section-head"><div><h2>Week 2 — Pool Action</h2><div class="section-note">Action counts are public. Sides and names unlock at kickoff.</div></div></div>
-    <div id="feedWarning" class="warn hidden">Live feed is not connected yet. Publish the <strong>Public Feed</strong> sheet as CSV and add its URL to data.js.</div>
-    <div id="poolAction"></div>
-  </section>
+<section class="card">
+  <div class="section-head"><div><h2>Week <span class="wk"></span> — Pool Action</h2><div class="section-note">Action counts are public. Sides and names unlock at kickoff.</div></div></div>
+  <div id="poolAction"></div>
+</section>
 
-  <section class="two-col">
+<section class="two-col">
+  <div class="card">
+    <div class="section-head"><div><h2>Live Weekly Leaderboard</h2><div class="section-note">Correct, losses, pending and maximum possible.</div></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Record</th><th>Pending</th><th>Max</th></tr></thead><tbody id="weeklyBody"></tbody></table></div>
+  </div>
+  <div>
     <div class="card">
-      <div class="section-head">
-        <div><h2>Overall Standings</h2><div class="section-note">All <span id="standingsCount">0</span> participants</div></div>
-        <input id="standingsSearch" class="search" type="search" placeholder="Find a player…" autocomplete="off">
-      </div>
-      <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead><tbody id="standingsBody"></tbody></table></div>
+      <div class="section-head"><div><h2 id="perfectTitle">Perfect Card Watch</h2><div class="section-note" id="perfectNote">Waiting for Week 3 cards</div></div></div>
+      <div id="perfectList" class="perfect-list">—</div>
     </div>
-    <div>
-      <div class="card">
-        <div class="section-head"><div><h2>First Quarter Title</h2><div class="section-note">Top 10 shown</div></div></div>
-        <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th></tr></thead><tbody id="firstQuarterBody"></tbody></table></div>
-      </div>
-      <div class="card">
-        <div class="section-head"><h2>By the Numbers</h2></div>
-        <div id="analytics" class="analytics"></div>
-      </div>
+    <div class="card">
+      <div class="section-head"><h2>Live Pool Notes</h2></div>
+      <div id="funGrid" class="fun-grid"></div>
     </div>
-  </section>
-  <div class="footer">Last updated: <span id="lastUpdated">—</span></div>
+  </div>
+</section>
+
+<section class="two-col">
+  <div class="card">
+    <div class="section-head"><div><h2>Overall Standings</h2><div class="section-note">Through Week 2 • best 12 of 14 will count</div></div><input id="standingsSearch" class="search" placeholder="Find a player…"></div>
+    <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead><tbody id="standingsBody"></tbody></table></div>
+  </div>
+  <div class="card">
+    <div class="section-head"><div><h2>First Quarter Title</h2><div class="section-note">Weeks 1–4 • top 10 shown</div></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th></tr></thead><tbody id="firstQuarterBody"></tbody></table></div>
+  </div>
+</section>
+<div class="footer">Static standings updated <span id="lastUpdated">—</span> • live data refreshes from the HQ feed</div>
 </main>
 
 <script src="data.js"></script>
+<script src="week.js"></script>
 <script>
 (async function(){
-  const data=window.PICKEM_DATA||{}, standings=data.standings||[], games=data.weekGames||[];
-  let feed=[];
-
+  const d=window.PICKEM_DATA||{}, standings=d.standings||[], games=d.weekGames||[]; let feed=[];
   const $=id=>document.getElementById(id);
   const esc=v=>String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
-  const money=v=>"$"+Number(v||0).toLocaleString("en-US");
-  const dt=iso=>new Date(iso);
-  const fmtShort=iso=>new Intl.DateTimeFormat("en-US",{weekday:"short",hour:"numeric",minute:"2-digit",timeZone:"America/New_York"}).format(dt(iso))+" ET";
-  const fmtLong=iso=>new Intl.DateTimeFormat("en-US",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/New_York"}).format(dt(iso))+" ET";
+  const dt=x=>new Date(x);
+  const fmt=x=>new Intl.DateTimeFormat("en-US",{weekday:"short",hour:"numeric",minute:"2-digit",timeZone:"America/New_York"}).format(dt(x))+" ET";
 
-  $("edition").textContent=data.edition||"";$("siteTitle").textContent=data.title||"Pick 'Em HQ";$("weekHero").textContent=data.currentWeek||"—";$("weekButton").textContent=data.currentWeek||"—";
-  $("winner").textContent=data.weekWinner||"—";$("winnerDetail").textContent=data.weekWinnerScore?data.weekWinnerScore+"-0 last week":"—";$("prizePool").textContent=money(data.prizePool||0);$("lastUpdated").textContent=data.lastUpdated||"—";$("standingsCount").textContent=standings.length;
-  if(data.formUrl){$("pickButton").href=data.formUrl;$("pickButton").classList.remove("hidden");}
+  $("edition").textContent=d.edition||"19th Edition"; $("siteTitle").textContent=d.title||"2026 College Football Pick 'Em HQ";
+  $("weekHero").textContent=d.currentWeek||3; $("weekButton").textContent=d.currentWeek||3; $("prizePool").textContent="$"+Number(d.prizePool||2550).toLocaleString("en-US");
+  $("lastUpdated").textContent=d.lastUpdated||"—"; document.querySelectorAll(".wk").forEach(e=>e.textContent=d.currentWeek||3);
 
-  renderStandings(standings);renderFirstQuarter(data.firstQuarter||[]);renderAnalytics(data.analytics||[]);
   standings.map(r=>r[1]).sort((a,b)=>a.localeCompare(b)).forEach(n=>{const o=document.createElement("option");o.value=n;o.textContent=n;$("playerSelect").appendChild(o);});
-  $("standingsSearch").addEventListener("input",function(){const q=this.value.trim().toLowerCase();renderStandings(!q?standings:standings.filter(r=>String(r[1]).toLowerCase().includes(q)),q);});
   $("playerSelect").addEventListener("change",()=>renderMyCard($("playerSelect").value));
+  $("standingsSearch").addEventListener("input",function(){const q=this.value.trim().toLowerCase();renderStandings(!q?standings:standings.filter(r=>String(r[1]).toLowerCase().includes(q)));});
+  renderStandings(standings); renderFirstQuarter();
 
-  if(data.publicFeedCsvUrl){
-    try{feed=await loadCsv(data.publicFeedCsvUrl);}
-    catch(e){$("feedWarning").classList.remove("hidden");}
-  }else $("feedWarning").classList.remove("hidden");
+  if(d.publicFeedCsvUrl){try{feed=await loadCsv(d.publicFeedCsvUrl);}catch(e){console.error(e);}}
+  renderTop(); renderMyCard(""); renderPoolAction(); renderWeekly(); renderPerfect(); renderFun();
 
-  renderTop();
-  renderMyCard("");
-  renderPoolAction();
+  function currentRows(type){return feed.filter(r=>r["Record Type"]===type&&Number(r.Week)===Number(d.currentWeek));}
 
   function renderTop(){
-    const sub=feed.find(r=>r["Record Type"]==="META"&&r.Detail==="SUBMITTED");
-    $("weekSubmitted").textContent=(sub?sub.Value:"—")+" / "+(data.participants||51);
+    const sub=currentRows("META").find(r=>r.Detail==="SUBMITTED");
+    $("submitted").textContent=(sub?sub.Value:"0")+" / "+(d.participants||51);
 
-    const next=feed.find(r=>r["Record Type"]==="META"&&r.Detail==="NEXT_LOCK");
-    if(next){
-      $("nextLock").textContent=fmtShort(next.Value || next["Kickoff ET"]);
-      $("nextLockDetail").textContent=next.Matchup||"";
-    }else{
-      $("nextLock").textContent="All locked";
-      $("nextLockDetail").textContent="Week 2 is fully underway";
-    }
+    const next=currentRows("META").find(r=>r.Detail==="NEXT_LOCK");
+    const fallback=games.filter(g=>dt(g.kickoff)>new Date()).sort((a,b)=>dt(a.kickoff)-dt(b.kickoff))[0];
+    if(next){$("nextLock").textContent=fmt(next.Value||next["Kickoff ET"]);$("nextLockDetail").textContent=next.Matchup||"";}
+    else if(fallback){$("nextLock").textContent=fmt(fallback.kickoff);$("nextLockDetail").textContent=fallback.matchup;}
+    else{$("nextLock").textContent="All locked";$("nextLockDetail").textContent="Week "+d.currentWeek+" is fully underway";}
+
+    const form=currentRows("META").find(r=>r.Detail==="FORM_URL");
+    if(form&&form.Value){$("pickButton").href=form.Value;$("pickButton").classList.remove("hidden");}
+
+    const w=parseWeekly();
+    if(w.length){const x=w[0];$("liveLeader").textContent=x.player;$("liveLeaderDetail").textContent=x.correct+"-"+x.losses+" • "+x.pending+" pending";}
+    else{$("liveLeader").textContent=d.lastWinner||"Eric Wood";$("liveLeaderDetail").textContent="Last winner: "+(d.lastWinnerScore||"6-1");}
   }
 
   function renderMyCard(player){
     const el=$("myCardResults");
-    if(!player){el.innerHTML='<div class="locked">Choose your name to check your Week 2 card.</div>';return;}
-    const p=feed.find(r=>r["Record Type"]==="PLAYER"&&r.Player===player);
-    const submitted=p?Number(p.Value||0):0;
-    const picks=feed.filter(r=>r["Record Type"]==="PICK"&&r.Player===player).sort((a,b)=>dt(a["Kickoff ET"])-dt(b["Kickoff ET"]));
-
-    let html='<div class="card-summary">'+esc(player)+' — '+submitted+' of 7 selections submitted</div>';
-    if(!submitted){html+='<div class="locked">No valid Week 2 card found yet.</div>';el.innerHTML=html;return;}
-    picks.forEach(r=>{html+='<div class="slot"><div><strong>'+esc(r.Selection)+'</strong><br><small>'+esc(r.Matchup)+'</small></div><small>'+esc(fmtShort(r["Kickoff ET"]))+'</small></div>';});
-    for(let i=picks.length;i<7;i++) html+='<div class="slot"><div>🔒 Hidden until kickoff</div><small>Selection '+(i+1)+'</small></div>';
+    if(!player){el.innerHTML='<div class="locked">Choose your name to check your Week '+d.currentWeek+' card.</div>';return;}
+    const p=currentRows("PLAYER").find(r=>r.Player===player);
+    const picks=currentRows("PICK").filter(r=>r.Player===player).sort((a,b)=>dt(a["Kickoff ET"])-dt(b["Kickoff ET"]));
+    if(!p){el.innerHTML='<div class="locked">No Week '+d.currentWeek+' card found yet.</div>';return;}
+    let meta={};try{meta=JSON.parse(p.Detail||"{}");}catch(e){}
+    let html='<strong>'+esc(player)+' — '+esc(p.Value||7)+' of 7 selections submitted</strong>';
+    if(meta.voids) html+=' <span style="color:#b91c1c">('+meta.voids+' void)</span>';
+    picks.forEach(r=>html+='<div class="slot"><div><strong>'+esc(r.Selection)+'</strong><br><small>'+esc(r.Matchup)+'</small></div><small>'+esc(r.Detail==="VOID"?"VOID":fmt(r["Kickoff ET"]))+'</small></div>');
+    for(let i=picks.length;i<7;i++) html+='<div class="slot"><div>🔒 Hidden until kickoff</div><small>Remaining</small></div>';
     el.innerHTML=html;
   }
 
   function renderPoolAction(){
-    const wrap=$("poolAction"), now=new Date();
-    const groups={};
-    games.forEach(g=>{const label=windowLabel(g.kickoff);(groups[label]||(groups[label]=[])).push(g);});
-    wrap.innerHTML="";
+    const wrap=$("poolAction"), groups={};
+    games.forEach(g=>{const label=windowLabel(g.kickoff);(groups[label]||(groups[label]=[])).push(g);}); wrap.innerHTML="";
     Object.keys(groups).forEach(label=>{
       const sec=document.createElement("div");sec.className="window";sec.innerHTML='<h3>'+esc(label)+'</h3>';
       groups[label].forEach(g=>{
-        const gameMeta=feed.find(r=>r["Record Type"]==="GAME"&&r["Game Key"]===g.gameKey);
-        const action=gameMeta?Number(gameMeta.Value||0):0;
-        const started=now>=dt(g.kickoff);
-        const picks=feed.filter(r=>r["Record Type"]==="PICK"&&r["Game Key"]===g.gameKey);
+        const gm=currentRows("GAME").find(r=>r["Game Key"]===g.key), action=gm?Number(gm.Value||0):0;
+        const picks=currentRows("PICK").filter(r=>r["Game Key"]===g.key&&r.Detail!=="VOID"), started=new Date()>=dt(g.kickoff);
         const row=document.createElement("details");row.className="game-row";
-        let body='<summary class="game-summary"><span class="game-name">'+esc(g.matchup)+'</span><span class="game-time">'+esc(fmtShort(g.kickoff))+'</span><span class="action-count">'+action+' player'+(action===1?'':'s')+' have action</span></summary><div class="game-detail">';
-        if(!started){body+='<div class="locked-line">🔒 Sides and names hidden until kickoff.</div>';}
-        else if(!picks.length){body+='<div class="locked-line">Kickoff has passed. Picks should appear on the next 5-minute refresh.</div>';}
+        let html='<summary class="game-summary"><span class="game-name">'+esc(g.matchup)+'</span><span class="game-time">'+esc(fmt(g.kickoff))+'</span><span class="action-count">'+action+' have action</span></summary><div class="game-detail">';
+        if(!started) html+='<div class="locked">🔒 Sides and names hidden until kickoff.</div>';
+        else if(!picks.length) html+='<div class="locked">Kickoff passed — waiting for the next refresh.</div>';
         else{
-          const a=picks.filter(r=>r.Selection===g.optionA),b=picks.filter(r=>r.Selection===g.optionB),total=a.length+b.length;
-          body+='<div class="sides">'+side(g.optionA,a,total)+side(g.optionB,b,total)+'</div>';
+          const map={}; picks.forEach(r=>(map[r.Selection]||(map[r.Selection]=[])).push(r.Player));
+          const entries=Object.entries(map), total=picks.length;
+          html+='<div class="sides">'+entries.map(([sel,names])=>'<div class="side"><div class="pct">'+Math.round(names.length/total*100)+'%</div><strong>'+esc(sel)+'</strong><small>'+names.length+' pick'+(names.length===1?'':'s')+'</small><div class="names">'+names.sort().map(esc).join("<br>")+'</div></div>').join("")+'</div>';
         }
-        body+='</div>';row.innerHTML=body;sec.appendChild(row);
+        html+='</div>';row.innerHTML=html;sec.appendChild(row);
       });
       wrap.appendChild(sec);
     });
   }
 
-  function side(label,rows,total){
-    const pct=total?Math.round(rows.length/total*100):0;
-    return '<div class="side"><div class="pct">'+pct+'%</div><strong>'+esc(label)+'</strong><small>'+rows.length+' pick'+(rows.length===1?'':'s')+'</small><div class="names">'+(rows.length?rows.map(r=>esc(r.Player)).sort().join("<br>"):"Nobody")+'</div></div>';
+  function parseWeekly(){
+    return currentRows("WEEKLY").map(r=>{let x={};try{x=JSON.parse(r.Detail||"{}");}catch(e){}return Object.assign({player:r.Player,correct:Number(r.Value||0)},x);})
+      .sort((a,b)=>b.correct-a.correct||a.losses-b.losses||b.max-a.max||a.player.localeCompare(b.player));
+  }
+
+  function renderWeekly(){
+    const w=parseWeekly(),body=$("weeklyBody");body.innerHTML="";
+    let rank=0,prev="";
+    w.slice(0,15).forEach((x,i)=>{
+      const key=x.correct+"|"+x.losses+"|"+x.max;if(key!==prev){rank=i+1;prev=key;}
+      const tr=document.createElement("tr");tr.innerHTML='<td class="rank">'+rank+'</td><td class="'+(rank===1?'leader':'')+'">'+esc(x.player)+'</td><td>'+x.correct+'-'+x.losses+'</td><td>'+x.pending+'</td><td>'+x.max+'</td>';body.appendChild(tr);
+    });
+    if(!w.length) body.innerHTML='<tr><td colspan="5">No Week '+d.currentWeek+' cards yet.</td></tr>';
+  }
+
+  function renderPerfect(){
+    const w=parseWeekly(), perfect=w.filter(x=>x.losses===0&&x.voids===0);
+    if(perfect.length){$("perfectTitle").textContent="Perfect Card Watch";$("perfectNote").textContent=perfect.length+" still alive";$("perfectList").innerHTML=perfect.slice(0,15).map(x=>esc(x.player)+' — '+x.correct+'-0, '+x.pending+' pending').join("<br>");}
+    else if(w.length){const best=Math.max(...w.map(x=>x.correct));$("perfectTitle").textContent="Best Card Alive";$("perfectNote").textContent="Nobody is perfect anymore";$("perfectList").innerHTML=w.filter(x=>x.correct===best).slice(0,15).map(x=>esc(x.player)+' — '+x.correct+'-'+x.losses).join("<br>");}
+    else{$("perfectList").textContent="Waiting for Week "+d.currentWeek+" cards…";}
+  }
+
+  function renderFun(){
+    const el=$("funGrid"), rows=currentRows("FUN"); el.innerHTML="";
+    const labels={POOL_KILLER:"Pool Killer",POOL_HERO:"Pool Hero",CONTRARIAN:"Contrarian Card",CHALK:"Chalk Merchant"};
+    rows.forEach(r=>{const x=document.createElement("div");x.className="fun";let strong=r.Player||r.Selection||"—",detail="";if(r.Detail==="POOL_KILLER"||r.Detail==="POOL_HERO")detail=r.Value+" affected • "+r.Matchup;else detail="Avg. pick popularity: "+r.Value;x.innerHTML='<small>'+esc(labels[r.Detail]||r.Detail)+'</small><strong>'+esc(strong)+'</strong><small>'+esc(detail)+'</small>';el.appendChild(x);});
+    if(!rows.length) el.innerHTML='<div class="fun"><small>Fun stats will populate as Week '+d.currentWeek+' develops.</small></div>';
+  }
+
+  function renderStandings(rows){
+    const body=$("standingsBody");body.innerHTML="";
+    rows.forEach(r=>{const mv=String(r[5]||"—"),cls=mv.startsWith("↑")?"up":mv.startsWith("↓")?"down":"";const tr=document.createElement("tr");tr.innerHTML='<td class="rank">'+r[0]+'</td><td class="'+(Number(r[0])===1?'leader':'')+'">'+esc(r[1])+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td><td class="'+cls+'">'+esc(mv)+'</td>';body.appendChild(tr);});
+  }
+
+  function renderFirstQuarter(){
+    const body=$("firstQuarterBody");body.innerHTML="";
+    (d.firstQuarter||[]).slice(0,10).forEach(r=>{const tr=document.createElement("tr");tr.innerHTML='<td class="rank">'+r[0]+'</td><td class="'+(Number(r[0])===1?'leader':'')+'">'+esc(r[1])+'</td><td>'+r[2]+'</td>';body.appendChild(tr);});
   }
 
   function windowLabel(iso){
-    const d=dt(iso), parts=new Intl.DateTimeFormat("en-US",{weekday:"long",hour:"numeric",hour12:false,timeZone:"America/New_York"}).formatToParts(d);
-    const day=parts.find(p=>p.type==="weekday").value, hour=Number(parts.find(p=>p.type==="hour").value);
-    if(day!=="Saturday") return day;
-    if(hour<14) return "Saturday — Noon Window";
-    if(hour<18) return "Saturday — Afternoon";
-    if(hour<22) return "Saturday — Evening";
-    return "Saturday — Late Night";
+    const parts=new Intl.DateTimeFormat("en-US",{weekday:"long",hour:"numeric",hour12:false,timeZone:"America/New_York"}).formatToParts(dt(iso));
+    const day=parts.find(p=>p.type==="weekday").value,h=Number(parts.find(p=>p.type==="hour").value);
+    if(day!=="Saturday") return day;if(h<14)return"Saturday — Noon";if(h<18)return"Saturday — Afternoon";if(h<22)return"Saturday — Evening";return"Saturday — Late Night";
   }
 
-  function renderStandings(rows,q){
-    const body=$("standingsBody");body.innerHTML="";
-    rows.forEach((r,i)=>{const tr=document.createElement("tr"),rank=r[0]||(i+1);if(q&&String(r[1]).toLowerCase().includes(q))tr.className="match";tr.innerHTML='<td class="rank">'+esc(rank)+'</td><td class="'+(String(rank)==="1"?"leader":"")+'">'+esc(r[1])+'</td><td>'+esc(r[2]||0)+'</td><td>'+esc(r[3]||0)+'</td><td>'+esc(r[5]||"—")+'</td>';body.appendChild(tr);});
-  }
-  function renderFirstQuarter(rows){const body=$("firstQuarterBody");body.innerHTML="";rows.slice(0,10).forEach((r,i)=>{const rank=r[0]||(i+1),tr=document.createElement("tr");tr.innerHTML='<td class="rank">'+esc(rank)+'</td><td class="'+(String(rank)==="1"?"leader":"")+'">'+esc(r[1])+'</td><td>'+esc(r[2])+'</td>';body.appendChild(tr);});}
-  function renderAnalytics(items){const el=$("analytics");el.innerHTML="";(items||[]).slice(0,8).forEach(a=>{const d=document.createElement("div");d.className="analytic";d.innerHTML='<small>'+esc(a.metric)+'</small><strong>'+esc(a.value)+'</strong><small>'+esc(a.detail)+'</small>';el.appendChild(d);});}
-
-  async function loadCsv(url){const res=await fetch(url,{cache:"no-store"});if(!res.ok)throw new Error("CSV");const txt=await res.text(),rows=parseCsv(txt);if(!rows.length)return[];const headers=rows[0];return rows.slice(1).filter(r=>r.some(Boolean)).map(r=>{const o={};headers.forEach((h,i)=>o[h]=r[i]||"");return o;});}
-  function parseCsv(text){const rows=[];let row=[],field="",q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c==='"'&&q&&n==='"'){field+='"';i++;}else if(c==='"'){q=!q;}else if(c===','&&!q){row.push(field);field="";}else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&n==='\n')i++;row.push(field);rows.push(row);row=[];field="";}else field+=c;}if(field.length||row.length){row.push(field);rows.push(row);}return rows;}
+  async function loadCsv(url){const res=await fetch(url,{cache:"no-store"});if(!res.ok)throw new Error("Feed failed");const txt=await res.text(),rows=parseCsv(txt);if(!rows.length)return[];const h=rows[0];return rows.slice(1).filter(r=>r.some(Boolean)).map(r=>{const o={};h.forEach((x,i)=>o[x]=r[i]||"");return o;});}
+  function parseCsv(text){const rows=[];let row=[],field="",q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c==='"'&&q&&n==='"'){field+='"';i++;}else if(c==='"')q=!q;else if(c===','&&!q){row.push(field);field="";}else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&n==='\n')i++;row.push(field);rows.push(row);row=[];field="";}else field+=c;}if(field.length||row.length){row.push(field);rows.push(row);}return rows;}
 })();
 </script>
 </body>
