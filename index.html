@@ -50,6 +50,7 @@
 
 <section class="card">
   <div class="section-head"><div><h2>Week <span class="wk"></span> — Pool Action</h2><div class="section-note">Action counts are public. Sides and names unlock at kickoff.</div></div></div>
+  <div id="offBoardNote" class="locked" style="margin-bottom:14px;display:none"></div>
   <div id="poolAction"></div>
 </section>
 
@@ -135,7 +136,7 @@
   renderStandings(standings); renderFirstQuarter();
 
   if(d.publicFeedCsvUrl){try{feed=await loadCsv(d.publicFeedCsvUrl);}catch(e){console.error(e);}}
-  renderTop(); renderMyCard(""); renderPoolAction(); renderMode(); renderWeekly(); renderPerfect(); renderFun(); renderPreviousWeekRecap();
+  renderTop(); renderMyCard(""); renderOffBoardNote(); renderPoolAction(); renderMode(); renderWeekly(); renderPerfect(); renderFun(); renderPreviousWeekRecap();
 
   function currentRows(type){return feed.filter(r=>r["Record Type"]===type&&Number(r.Week)===Number(d.currentWeek));}
 
@@ -222,6 +223,14 @@
     picks.forEach(r=>html+='<div class="slot"><div><strong>'+esc(r.Selection)+'</strong><br><small>'+esc(r.Matchup)+'</small></div><small>'+esc(r.Detail==="VOID"?"VOID":fmt(r["Kickoff ET"]))+'</small></div>');
     for(let i=picks.length;i<7;i++) html+='<div class="slot"><div>🔒 Hidden until kickoff</div><small>Remaining</small></div>';
     el.innerHTML=html;
+  }
+
+  function renderOffBoardNote(){
+    const items=d.offBoardGames||[];
+    const el=$("offBoardNote");
+    if(!el||!items.length) return;
+    el.style.display="block";
+    el.innerHTML='<strong>Off the board:</strong> '+items.map(esc).join(" • ")+' — no broadly available market spread was posted when Week '+d.currentWeek+' was frozen.';
   }
 
   function renderPoolAction(){

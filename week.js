@@ -677,112 +677,142 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
     {
       "key": "MIA-WAKE",
       "kickoff": "2026-09-18T19:30:00-04:00",
-      "matchup": "#5 Miami at Wake Forest"
+      "matchup": "#5 Miami at Wake Forest",
+      "optionA": "#5 Miami -22 at Wake Forest",
+      "optionB": "Wake Forest +22 vs. #5 Miami"
     },
     {
       "key": "HOU-TTU",
       "kickoff": "2026-09-18T20:00:00-04:00",
-      "matchup": "#22 Houston at #13 Texas Tech"
-    },
-    {
-      "key": "PORTST-ORE",
-      "kickoff": "2026-09-18T22:30:00-04:00",
-      "matchup": "Portland State at #21 Oregon"
+      "matchup": "#22 Houston at #13 Texas Tech",
+      "optionA": "#22 Houston +8.5 at #13 Texas Tech",
+      "optionB": "#13 Texas Tech -8.5 vs. #22 Houston"
     },
     {
       "key": "UGA-ARK",
       "kickoff": "2026-09-19T12:00:00-04:00",
-      "matchup": "#2 Georgia at Arkansas"
+      "matchup": "#2 Georgia at Arkansas",
+      "optionA": "#2 Georgia -24.5 at Arkansas",
+      "optionB": "Arkansas +24.5 vs. #2 Georgia"
     },
     {
       "key": "KENT-OSU",
       "kickoff": "2026-09-19T12:00:00-04:00",
-      "matchup": "Kent State at #6 Ohio State"
+      "matchup": "Kent State at #6 Ohio State",
+      "optionA": "Kent State +52.5 at #6 Ohio State",
+      "optionB": "#6 Ohio State -52.5 vs. Kent State"
     },
     {
       "key": "BUFF-PSU",
       "kickoff": "2026-09-19T12:00:00-04:00",
-      "matchup": "Buffalo at #14 Penn State"
+      "matchup": "Buffalo at #14 Penn State",
+      "optionA": "Buffalo +38.5 at #14 Penn State",
+      "optionB": "#14 Penn State -38.5 vs. Buffalo"
     },
     {
       "key": "FSU-BAMA",
       "kickoff": "2026-09-19T15:30:00-04:00",
-      "matchup": "Florida State at #10 Alabama"
+      "matchup": "Florida State at #10 Alabama",
+      "optionA": "Florida State +20.5 at #10 Alabama",
+      "optionB": "#10 Alabama -20.5 vs. Florida State"
     },
     {
       "key": "UK-TAMU",
       "kickoff": "2026-09-19T15:30:00-04:00",
-      "matchup": "Kentucky at #9 Texas A&M"
+      "matchup": "Kentucky at #9 Texas A&M",
+      "optionA": "Kentucky +15.5 at #9 Texas A&M",
+      "optionB": "#9 Texas A&M -15.5 vs. Kentucky"
     },
     {
       "key": "USU-UTAH",
       "kickoff": "2026-09-19T15:30:00-04:00",
-      "matchup": "Utah State at #17 Utah"
+      "matchup": "Utah State at #17 Utah",
+      "optionA": "Utah State +28.5 at #17 Utah",
+      "optionB": "#17 Utah -28.5 vs. Utah State"
     },
     {
       "key": "SMU-LOU",
       "kickoff": "2026-09-19T15:30:00-04:00",
-      "matchup": "#16 SMU at #23 Louisville"
+      "matchup": "#16 SMU at #23 Louisville",
+      "optionA": "#16 SMU +1.5 at #23 Louisville",
+      "optionB": "#23 Louisville -1.5 vs. #16 SMU"
     },
     {
       "key": "UTEP-MICH",
       "kickoff": "2026-09-19T15:30:00-04:00",
-      "matchup": "UTEP at #19 Michigan"
+      "matchup": "UTEP at #19 Michigan",
+      "optionA": "UTEP +36.5 at #19 Michigan",
+      "optionB": "#19 Michigan -36.5 vs. UTEP"
     },
     {
       "key": "USC-RUT",
       "kickoff": "2026-09-19T15:30:00-04:00",
-      "matchup": "#12 USC at Rutgers"
+      "matchup": "#12 USC at Rutgers",
+      "optionA": "#12 USC -24.5 at Rutgers",
+      "optionB": "Rutgers +24.5 vs. #12 USC"
     },
     {
       "key": "WKU-IU",
       "kickoff": "2026-09-19T16:00:00-04:00",
-      "matchup": "Western Kentucky at #4 Indiana"
-    },
-    {
-      "key": "UNI-IOWA",
-      "kickoff": "2026-09-19T16:00:00-04:00",
-      "matchup": "Northern Iowa at #18 Iowa"
+      "matchup": "Western Kentucky at #4 Indiana",
+      "optionA": "Western Kentucky +44.5 at #4 Indiana",
+      "optionB": "#4 Indiana -44.5 vs. Western Kentucky"
     },
     {
       "key": "TROY-MIZ",
       "kickoff": "2026-09-19T19:00:00-04:00",
-      "matchup": "Troy at #20 Missouri"
+      "matchup": "Troy at #20 Missouri",
+      "optionA": "Troy +27.5 at #20 Missouri",
+      "optionB": "#20 Missouri -27.5 vs. Troy"
     },
     {
       "key": "LSU-OM",
       "kickoff": "2026-09-19T19:30:00-04:00",
-      "matchup": "#7 LSU at #8 Ole Miss"
+      "matchup": "#7 LSU at #8 Ole Miss",
+      "optionA": "#7 LSU -2.5 at #8 Ole Miss",
+      "optionB": "#8 Ole Miss +2.5 vs. #7 LSU"
     },
     {
       "key": "NM-OU",
       "kickoff": "2026-09-19T19:30:00-04:00",
-      "matchup": "New Mexico at #24 Oklahoma"
+      "matchup": "New Mexico at #24 Oklahoma",
+      "optionA": "New Mexico +22.5 at #24 Oklahoma",
+      "optionB": "#24 Oklahoma -22.5 vs. New Mexico"
     },
     {
       "key": "BYU-CSU",
       "kickoff": "2026-09-19T19:30:00-04:00",
-      "matchup": "#11 BYU at Colorado State"
+      "matchup": "#11 BYU at Colorado State",
+      "optionA": "#11 BYU -18.5 at Colorado State",
+      "optionB": "Colorado State +18.5 vs. #11 BYU"
     },
     {
       "key": "WVU-UVA",
       "kickoff": "2026-09-19T19:30:00-04:00",
-      "matchup": "West Virginia vs. #25 Virginia"
+      "matchup": "West Virginia vs. #25 Virginia",
+      "optionA": "West Virginia +9.5 vs. #25 Virginia",
+      "optionB": "#25 Virginia -9.5 vs. West Virginia"
     },
     {
       "key": "MSU-ND",
       "kickoff": "2026-09-19T19:30:00-04:00",
-      "matchup": "Michigan State at #3 Notre Dame"
+      "matchup": "Michigan State at #3 Notre Dame",
+      "optionA": "Michigan State +29 at #3 Notre Dame",
+      "optionB": "#3 Notre Dame -29 vs. Michigan State"
     },
     {
       "key": "KSU-TENN",
       "kickoff": "2026-09-19T19:45:00-04:00",
-      "matchup": "Kennesaw State at #15 Tennessee"
+      "matchup": "Kennesaw State at #15 Tennessee",
+      "optionA": "Kennesaw State +34.5 at #15 Tennessee",
+      "optionB": "#15 Tennessee -34.5 vs. Kennesaw State"
     },
     {
       "key": "UTSA-TEX",
       "kickoff": "2026-09-19T20:00:00-04:00",
-      "matchup": "UTSA at #1 Texas"
+      "matchup": "UTSA at #1 Texas",
+      "optionA": "UTSA +29.5 at #1 Texas",
+      "optionB": "#1 Texas -29.5 vs. UTSA"
     }
   ],
   "lastUpdated": "Sep 13, 2026",
@@ -843,5 +873,10 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       ],
       "weeksRemaining": 2
     }
-  }
+  },
+  "offBoardGames": [
+    "Portland State at #21 Oregon",
+    "Northern Iowa at #18 Iowa"
+  ],
+  "slateNote": "20-game Week 3 slate. Portland State–Oregon and Northern Iowa–Iowa were left off because no broadly available market spread was posted at freeze."
 });
