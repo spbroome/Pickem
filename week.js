@@ -843,6 +843,6 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "weeksRemaining": 1
     }
   },
-  "slateNote": "18 qualifying Week 4 games. Current spreads are a snapshot only and are not frozen yet.",
+  "slateNote": "18 qualifying Week 4 games. Official pool lines are frozen.",
   "lastUpdated": "Sep 22, 2026"
 });
