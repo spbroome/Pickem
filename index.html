@@ -44,7 +44,7 @@
   <div class="section-head"><div><h2>Find My Card</h2><div class="section-note">Confirm your card is in. Picks reveal only after kickoff.</div></div></div>
   <div class="my-card">
     <select id="playerSelect" class="select"><option value="">Choose a player…</option></select>
-    <div id="myCardResults"><div class="locked">Choose your name to check your Week 3 card.</div></div>
+    <div id="myCardResults"><div class="locked">Choose your name to check your Week 4 card.</div></div>
   </div>
 </section>
 
@@ -93,7 +93,7 @@
   </div>
   <div>
     <div class="card">
-      <div class="section-head"><div><h2 id="perfectTitle">Perfect Card Watch</h2><div class="section-note" id="perfectNote">Waiting for Week 3 cards</div></div></div>
+      <div class="section-head"><div><h2 id="perfectTitle">Perfect Card Watch</h2><div class="section-note" id="perfectNote">Waiting for Week 4 cards</div></div></div>
       <div id="perfectList" class="perfect-list">—</div>
     </div>
     <div class="card">
@@ -105,7 +105,7 @@
 
 <section class="two-col">
   <div class="card">
-    <div class="section-head"><div><h2>Overall Standings</h2><div class="section-note">Through Week 2 • best 12 of 14 will count</div></div><input id="standingsSearch" class="search" placeholder="Find a player…"></div>
+    <div class="section-head"><div><h2>Overall Standings</h2><div class="section-note">Through Week 3 • best 12 of 14 will count</div></div><input id="standingsSearch" class="search" placeholder="Find a player…"></div>
     <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead><tbody id="standingsBody"></tbody></table></div>
   </div>
   <div class="card">
@@ -180,7 +180,11 @@
 
   function renderMode(){
     const hasFinal=hasGradedWeekly_();
-    $("preWeekRecap").classList.toggle("hidden",hasFinal);
+
+    // Keep the previous-week stats recap visible all week.
+    // Once games are graded, add the live leaderboard beneath it
+    // instead of replacing the recap.
+    $("preWeekRecap").classList.remove("hidden");
     $("liveWeekSection").classList.toggle("hidden",!hasFinal);
   }
 
