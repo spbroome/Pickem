@@ -58,18 +58,18 @@
   <div class="card">
     <div class="section-head">
       <div>
-        <h2>Week 2 Hangover</h2>
-        <div class="section-note">Something to look at while Week 3 waits for us to make bad decisions.</div>
+        <h2>Week 3 Hangover</h2>
+        <div class="section-note">Something to look at while Week 4 waits for us to make bad decisions.</div>
       </div>
     </div>
-    <div id="week2Hangover" class="fun-grid"></div>
+    <div id="week3SpecialNote" class="locked" style="margin-bottom:12px;display:none"></div><div id="week2Hangover" class="fun-grid"></div>
   </div>
   <div>
     <div class="card">
       <div class="section-head">
         <div>
           <h2>First Quarter Race</h2>
-          <div class="section-note">Two weeks remain in the opening mini-title.</div>
+          <div class="section-note">One week remains in the opening mini-title.</div>
         </div>
       </div>
       <div id="titleRaceRecap" class="perfect-list"></div>
@@ -77,7 +77,7 @@
     <div class="card">
       <div class="section-head">
         <div>
-          <h2>Week 2 Scoreboard</h2>
+          <h2>Week 3 Scoreboard</h2>
           <div class="section-note">The great middle class was alive and well.</div>
         </div>
       </div>
@@ -140,6 +140,16 @@
 
   function currentRows(type){return feed.filter(r=>r["Record Type"]===type&&Number(r.Week)===Number(d.currentWeek));}
 
+  function hasGradedWeekly_(){
+    return currentRows("WEEKLY").some(r=>{
+      let x={};
+      try{x=JSON.parse(r.Detail||"{}");}catch(e){}
+      const correct=Number(r.Value||x.correct||0);
+      const losses=Number(x.losses||0);
+      return correct>0 || losses>0;
+    });
+  }
+
   function renderTop(){
     const sub=currentRows("META").find(r=>r.Detail==="SUBMITTED");
     $("submitted").textContent=(sub?sub.Value:"0")+" / "+(d.participants||51);
@@ -154,7 +164,7 @@
     if(form&&form.Value){$("pickButton").href=form.Value;$("pickButton").classList.remove("hidden");}
 
     const w=parseWeekly();
-    const hasFinal=currentRows("RESULT").length>0;
+    const hasFinal=hasGradedWeekly_();
     const leaderLabel=$("liveLeader").closest(".stat").querySelector(".label");
     if(hasFinal && w.length){
       leaderLabel.textContent="Live Weekly Leader";
@@ -164,18 +174,25 @@
     }else{
       leaderLabel.textContent="Last Week's Winner";
       $("liveLeader").textContent=(d.previousWeekRecap&&d.previousWeekRecap.winner)||d.lastWinner||"Eric Wood";
-      $("liveLeaderDetail").textContent=((d.previousWeekRecap&&d.previousWeekRecap.winnerScore)||d.lastWinnerScore||"6-1")+" in Week 2";
+      $("liveLeaderDetail").textContent=((d.previousWeekRecap&&d.previousWeekRecap.winnerScore)||d.lastWinnerScore||"5-2")+" in Week "+((d.previousWeekRecap&&d.previousWeekRecap.week)||3);
     }
   }
 
   function renderMode(){
-    const hasFinal=currentRows("RESULT").length>0;
+    const hasFinal=hasGradedWeekly_();
     $("preWeekRecap").classList.toggle("hidden",hasFinal);
     $("liveWeekSection").classList.toggle("hidden",!hasFinal);
   }
 
   function renderPreviousWeekRecap(){
     const r=d.previousWeekRecap||{};
+
+    const special=$("week3SpecialNote");
+    if(special && r.specialNote){
+      special.style.display="block";
+      special.innerHTML='<strong>Week '+esc(r.week||3)+' weirdness:</strong> '+esc(r.specialNote);
+    }
+
     const hang=$("week2Hangover");
     if(hang){
       const cards=[
@@ -194,18 +211,21 @@
 
     const race=$("titleRaceRecap");
     if(race){
-      const t=r.titleRace||{}, leaders=t.leaders||[], one=t.oneBack||[];
+      const t=r.titleRace||{}, groups=t.groups||[];
       let html="";
-      leaders.forEach(x=>{html+='<strong>T1: '+esc(x.player)+' — '+esc(x.score)+'</strong><br>';});
-      if(one.length) html+='<br><span><strong>'+one.length+' players one back at 10:</strong><br>'+one.map(esc).join(", ")+'</span>';
-      html+='<br><br><span>'+esc(t.weeksRemaining||2)+' weeks remain.</span>';
+      groups.forEach((g,i)=>{
+        if(i) html+='<br>';
+        html+='<strong>'+esc(g.label)+': '+esc((g.players||[]).join(", "))+' — '+esc(g.score)+'</strong>';
+      });
+      const wr=Number(t.weeksRemaining||0);
+      html+='<br><br><span>'+wr+' week'+(wr===1?'':'s')+' remain'+(wr===1?'s':'')+'.</span>';
       race.innerHTML=html;
     }
 
     const dist=$("week2Distribution");
     if(dist){
       const s=r.scoreDistribution||{};
-      const order=["6-1","5-2","4-3","3-4","2-5","1-6"];
+      const order=r.distributionOrder||Object.keys(s);
       dist.innerHTML=order.map(k=>'<strong>'+esc(k)+':</strong> '+esc(s[k]||0)+' player'+((s[k]||0)===1?'':'s')).join("<br>")+
         '<br><br><span>'+esc(r.submission||"")+'</span>';
     }
@@ -228,9 +248,14 @@
   function renderOffBoardNote(){
     const items=d.offBoardGames||[];
     const el=$("offBoardNote");
-    if(!el||!items.length) return;
-    el.style.display="block";
-    el.innerHTML='<strong>Off the board:</strong> '+items.map(esc).join(" • ")+' — no broadly available market spread was posted when Week '+d.currentWeek+' was frozen.';
+    if(!el) return;
+    if(items.length){
+      el.style.display="block";
+      el.innerHTML='<strong>Off the board:</strong> '+items.map(esc).join(" • ");
+    }else if(d.slateNote){
+      el.style.display="block";
+      el.innerHTML='<strong>Week '+d.currentWeek+' slate:</strong> '+esc(d.slateNote);
+    }
   }
 
   function renderPoolAction(){
@@ -292,7 +317,13 @@
 
   function renderFirstQuarter(){
     const body=$("firstQuarterBody");body.innerHTML="";
-    (d.firstQuarter||[]).slice(0,10).forEach(r=>{const tr=document.createElement("tr");tr.innerHTML='<td class="rank">'+r[0]+'</td><td class="'+(Number(r[0])===1?'leader':'')+'">'+esc(r[1])+'</td><td>'+r[2]+'</td>';body.appendChild(tr);});
+    const rows=d.firstQuarter||[];
+    const cutoff=rows.length>10?Number(rows[9][2]):null;
+    rows.filter((r,i)=>i<10 || (cutoff!==null && Number(r[2])===cutoff)).forEach(r=>{
+      const tr=document.createElement("tr");
+      tr.innerHTML='<td class="rank">'+r[0]+'</td><td class="'+(Number(r[0])===1?'leader':'')+'">'+esc(r[1])+'</td><td>'+r[2]+'</td>';
+      body.appendChild(tr);
+    });
   }
 
   function windowLabel(iso){
