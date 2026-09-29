@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Historical Picks — 2026 College Football Pick 'Em</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--text:#111827;--muted:#64748b;--line:#e2e8f0;--purple:#3730a3;--navy:#111827;--good:#166534;--goodbg:#dcfce7;--bad:#b91c1c;--badbg:#fee2e2;--void:#92400e;--voidbg:#fef3c7;--soft:#f1f5f9}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+.shell{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
+.hero{background:linear-gradient(135deg,var(--navy),var(--purple));color:#fff;border-radius:20px;padding:26px 30px;box-shadow:0 12px 30px rgba(15,23,42,.15)}
+.eyebrow{text-transform:uppercase;letter-spacing:.11em;font-size:12px;opacity:.75;font-weight:700}
+h1{margin:7px 0 7px;font-size:32px}.sub{opacity:.85;margin:0;max-width:760px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;text-decoration:none;border-radius:10px;padding:10px 14px;font-weight:700;background:#fff;color:#312e81;border:1px solid #fff}
+.btn.secondary{background:transparent;color:#fff}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 14px rgba(15,23,42,.04);padding:20px;margin-top:16px}
+.controls{display:grid;grid-template-columns:auto auto 1fr;gap:12px;align-items:end}
+.control label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--muted);margin-bottom:6px}
+select,input{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 11px;background:#fff;font-size:14px}
+.view-toggle{display:flex;gap:8px}.toggle{border:1px solid var(--line);background:#fff;border-radius:9px;padding:10px 14px;font-weight:700;cursor:pointer}.toggle.active{background:#111827;color:#fff;border-color:#111827}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.stat{border:1px solid var(--line);border-radius:12px;padding:14px}.label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--muted)}.value{font-size:20px;font-weight:800;margin-top:4px}.detail{font-size:12px;color:var(--muted);margin-top:3px}
+.list{margin-top:16px}.player-row{display:grid;grid-template-columns:190px 1fr;gap:15px;padding:14px 0;border-bottom:1px solid #eef2f7}.player-row:last-child{border-bottom:0}.player-name{font-weight:800}.record{display:inline-block;margin-top:5px;border-radius:999px;background:var(--soft);padding:4px 8px;font-size:12px;font-weight:800}.winner .player-name{color:var(--good)}.winner .record{background:var(--goodbg);color:var(--good)}
+.picks{display:flex;flex-wrap:wrap;gap:7px}.pick{border:1px solid var(--line);border-radius:9px;padding:7px 9px;font-size:12px;line-height:1.25}.pick.w{background:var(--goodbg);border-color:#bbf7d0;color:var(--good)}.pick.l{background:var(--badbg);border-color:#fecaca;color:var(--bad)}.pick.void{background:var(--voidbg);border-color:#fde68a;color:var(--void)}.pick.p{background:#e0f2fe;color:#075985;border-color:#bae6fd}
+.meta{margin-top:8px;font-size:12px;color:var(--muted)}.missed{color:var(--muted);font-style:italic}
+.player-history-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.season-total{font-size:24px;font-weight:800}.week-card{border:1px solid var(--line);border-radius:12px;padding:15px;margin-top:11px}.week-card h3{margin:0 0 10px}.week-card .picks{margin-top:8px}
+.hidden{display:none!important}.empty{padding:28px;text-align:center;color:var(--muted)}
+.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:20px}
+@media(max-width:780px){.controls{grid-template-columns:1fr}.summary{grid-template-columns:1fr}.player-row{grid-template-columns:1fr}.player-history-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<main class="shell">
+<section class="hero">
+  <div class="eyebrow">19th Edition • Archive</div>
+  <h1>Historical Picks</h1>
+  <p class="sub">Every finalized card from completed weeks. Search the pool, inspect old picks, and settle arguments with evidence instead of confidence.</p>
+  <div class="actions"><a class="btn" href="index.html">← Back to Pick 'Em HQ</a></div>
+</section>
+
+<section class="card">
+  <div class="controls">
+    <div class="control">
+      <label>View</label>
+      <div class="view-toggle">
+        <button id="byWeekBtn" class="toggle active">By week</button>
+        <button id="byPlayerBtn" class="toggle">By player</button>
+      </div>
+    </div>
+    <div id="weekControl" class="control">
+      <label>Completed week</label>
+      <select id="weekSelect"></select>
+    </div>
+    <div id="searchControl" class="control">
+      <label>Find a player</label>
+      <input id="playerSearch" placeholder="Type a name…">
+    </div>
+    <div id="playerControl" class="control hidden">
+      <label>Player</label>
+      <select id="playerSelect"></select>
+    </div>
+  </div>
+</section>
+
+<section id="weekView">
+  <div id="weekSummary" class="summary"></div>
+  <section class="card"><div id="weekList" class="list"></div></section>
+</section>
+
+<section id="playerView" class="hidden">
+  <section class="card">
+    <div id="playerHistory"></div>
+  </section>
+</section>
+
+<div class="footer">Only completed weeks are archived here. Current-week picks remain subject to the pool's kickoff reveal rules.</div>
+</main>
+
+<script src="history.js"></script>
+<script>
+(function(){
+  const d=window.PICKEM_HISTORY||{weeks:[],participants:[]};
+  const $=id=>document.getElementById(id);
+  const esc=v=>String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+  const winners={1:["Eric Nilsson"],2:["Eric Wood"],3:["David Lasky","Will Martin"],4:["Cale Homesley"]};
+
+  d.weeks.forEach(w=>{
+    const o=document.createElement("option");o.value=w.week;o.textContent=w.label;$("weekSelect").appendChild(o);
+  });
+  d.participants.forEach(p=>{
+    const o=document.createElement("option");o.value=p;o.textContent=p;$("playerSelect").appendChild(o);
+  });
+  $("weekSelect").value=d.weeks[d.weeks.length-1]?.week||1;
+  $("playerSelect").value=d.participants[0]||"";
+
+  $("byWeekBtn").onclick=()=>setMode("week");
+  $("byPlayerBtn").onclick=()=>setMode("player");
+  $("weekSelect").onchange=renderWeek;
+  $("playerSearch").oninput=renderWeek;
+  $("playerSelect").onchange=renderPlayer;
+
+  function setMode(mode){
+    const byWeek=mode==="week";
+    $("byWeekBtn").classList.toggle("active",byWeek);
+    $("byPlayerBtn").classList.toggle("active",!byWeek);
+    $("weekControl").classList.toggle("hidden",!byWeek);
+    $("searchControl").classList.toggle("hidden",!byWeek);
+    $("playerControl").classList.toggle("hidden",byWeek);
+    $("weekView").classList.toggle("hidden",!byWeek);
+    $("playerView").classList.toggle("hidden",byWeek);
+    byWeek?renderWeek():renderPlayer();
+  }
+
+  function pickHtml(p){
+    const cls=p.result==="W"?"w":p.result==="L"?"l":p.result==="VOID"?"void":p.result==="P"?"p":"";
+    const icon=p.result==="W"?"✓":p.result==="L"?"✕":p.result==="VOID"?"VOID":p.result==="P"?"PUSH":"";
+    return '<span class="pick '+cls+'"><strong>'+icon+'</strong> '+esc(p.selection)+'</span>';
+  }
+
+  function renderWeek(){
+    const week=Number($("weekSelect").value);
+    const w=d.weeks.find(x=>x.week===week);
+    if(!w)return;
+    $("weekSummary").innerHTML=
+      '<div class="stat"><div class="label">Weekly winner</div><div class="value">'+esc(w.winner)+'</div><div class="detail">'+esc(w.winnerScore)+'</div></div>'+
+      '<div class="stat"><div class="label">Cards received</div><div class="value">'+esc(w.submitted)+' / '+esc(d.participants.length)+'</div><div class="detail">finalized cards</div></div>'+
+      '<div class="stat"><div class="label">Tiebreaker actual</div><div class="value">'+esc(w.actualTiebreaker)+'</div><div class="detail">'+esc(w.tiebreakerGame)+'</div></div>';
+
+    const q=$("playerSearch").value.trim().toLowerCase();
+    const cards=w.cards.slice().filter(c=>!q||c.player.toLowerCase().includes(q));
+    cards.sort((a,b)=>{
+      if(a.submitted!==b.submitted)return a.submitted?-1:1;
+      return b.wins-a.wins || a.losses-b.losses || a.player.localeCompare(b.player);
+    });
+
+    const list=$("weekList");list.innerHTML="";
+    if(!cards.length){list.innerHTML='<div class="empty">No matching player.</div>';return;}
+    cards.forEach(c=>{
+      const row=document.createElement("div");
+      const isWinner=(winners[w.week]||[]).includes(c.player);
+      row.className="player-row"+(isWinner?" winner":"");
+      let left='<div><div class="player-name">'+(isWinner?'🏆 ':'')+esc(c.player)+'</div><span class="record">'+esc(c.record)+'</span>';
+      if(c.submitted) left+='<div class="meta">Tiebreaker: '+esc(c.tiebreaker??"—")+(c.note?' • '+esc(c.note):'')+'</div>';
+      else left+='<div class="meta">No card submitted</div>';
+      left+='</div>';
+      const right=c.submitted?'<div class="picks">'+c.picks.map(pickHtml).join("")+'</div>':'<div class="missed">Missed week</div>';
+      row.innerHTML=left+right;list.appendChild(row);
+    });
+  }
+
+  function renderPlayer(){
+    const player=$("playerSelect").value;
+    const cards=d.weeks.map(w=>({week:w,card:w.cards.find(c=>c.player===player)})).filter(x=>x.card);
+    const totalWins=cards.reduce((s,x)=>s+x.card.wins,0);
+    const weeksPlayed=cards.filter(x=>x.card.submitted).length;
+    let html='<div class="player-history-head"><div><div class="label">Player history</div><h2 style="margin:4px 0 0">'+esc(player)+'</h2></div>'+
+      '<div><div class="label">Correct picks</div><div class="season-total">'+totalWins+'</div><div class="detail">'+weeksPlayed+' week'+(weeksPlayed===1?'':'s')+' played</div></div></div>';
+
+    cards.forEach(({week,card})=>{
+      const isWinner=(winners[week.week]||[]).includes(player);
+      html+='<div class="week-card"><h3>'+(isWinner?'🏆 ':'')+'Week '+week.week+' — '+esc(card.record)+'</h3>';
+      if(card.submitted){
+        html+='<div class="picks">'+card.picks.map(pickHtml).join("")+'</div>';
+        html+='<div class="meta">Tiebreaker: '+esc(card.tiebreaker??"—")+' • Actual: '+esc(week.actualTiebreaker)+(card.note?' • '+esc(card.note):'')+'</div>';
+      }else{
+        html+='<div class="missed">No card submitted.</div>';
+      }
+      html+='</div>';
+    });
+    $("playerHistory").innerHTML=html;
+  }
+
+  renderWeek();
+})();
+</script>
+</body>
+</html>
