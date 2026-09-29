@@ -673,7 +673,83 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       1
     ]
   ],
-  "weekGames": [],
+  "weekGames": [
+    {
+      "key": "BAMA-MSU",
+      "kickoff": "2026-10-03T12:00:00-04:00",
+      "matchup": "#7 Alabama at #16 Mississippi State"
+    },
+    {
+      "key": "BC-SMU",
+      "kickoff": "2026-10-03T12:00:00-04:00",
+      "matchup": "Boston College at #21 SMU"
+    },
+    {
+      "key": "ND-UNC",
+      "kickoff": "2026-10-03T12:00:00-04:00",
+      "matchup": "#3 Notre Dame at North Carolina"
+    },
+    {
+      "key": "UCF-HOU",
+      "kickoff": "2026-10-03T12:00:00-04:00",
+      "matchup": "UCF at #20 Houston"
+    },
+    {
+      "key": "VAN-UGA",
+      "kickoff": "2026-10-03T12:45:00-04:00",
+      "matchup": "Vanderbilt at #2 Georgia"
+    },
+    {
+      "key": "AUB-TENN",
+      "kickoff": "2026-10-03T15:30:00-04:00",
+      "matchup": "Auburn at #17 Tennessee"
+    },
+    {
+      "key": "FLA-MIZ",
+      "kickoff": "2026-10-03T15:30:00-04:00",
+      "matchup": "#8 Florida at #25 Missouri"
+    },
+    {
+      "key": "OSU-IOWA",
+      "kickoff": "2026-10-03T15:30:00-04:00",
+      "matchup": "#5 Ohio State at #14 Iowa"
+    },
+    {
+      "key": "UK-SC",
+      "kickoff": "2026-10-03T16:15:00-04:00",
+      "matchup": "#24 Kentucky at South Carolina"
+    },
+    {
+      "key": "BYU-TCU",
+      "kickoff": "2026-10-03T19:00:00-04:00",
+      "matchup": "#10 BYU at TCU"
+    },
+    {
+      "key": "MIA-CLEM",
+      "kickoff": "2026-10-03T19:30:00-04:00",
+      "matchup": "#4 Miami at Clemson"
+    },
+    {
+      "key": "TTU-COLO",
+      "kickoff": "2026-10-03T19:30:00-04:00",
+      "matchup": "#12 Texas Tech at Colorado"
+    },
+    {
+      "key": "USU-BOISE",
+      "kickoff": "2026-10-03T19:30:00-04:00",
+      "matchup": "Utah State at #22 Boise State"
+    },
+    {
+      "key": "WASH-USC",
+      "kickoff": "2026-10-03T19:30:00-04:00",
+      "matchup": "Washington at #18 USC"
+    },
+    {
+      "key": "IND-RUT",
+      "kickoff": "2026-10-03T20:00:00-04:00",
+      "matchup": "#6 Indiana at Rutgers"
+    }
+  ],
   "previousWeekRecap": {
     "week": 4,
     "winner": "Cale Homesley",
@@ -734,6 +810,9 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "note": "Eric wins the tiebreak via his Week 2 weekly win."
     }
   },
-  "slateNote": "Week 5 matchups and lines will populate once the new poll and board are ready.",
-  "lastUpdated": "Sep 27, 2026"
+  "slateNote": "15 playable Week 5 games. McNeese State at #11 LSU is off the board.",
+  "lastUpdated": "Sep 28, 2026",
+  "offBoardGames": [
+    "McNeese State at #11 LSU — no broadly available market spread was posted when Week 5 was frozen."
+  ]
 });
