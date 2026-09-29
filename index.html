@@ -9,7 +9,7 @@
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
 .shell{max-width:1180px;margin:0 auto;padding:28px 18px 56px}.hero{background:linear-gradient(135deg,#111827,#3730a3);color:#fff;border-radius:20px;padding:28px 30px;box-shadow:0 12px 30px rgba(15,23,42,.15)}
 .eyebrow{text-transform:uppercase;letter-spacing:.11em;font-size:12px;opacity:.75;font-weight:700}h1{margin:7px 0 6px;font-size:34px}.sub{opacity:.85;margin:0}
-.cta{display:inline-block;margin-top:20px;background:#fff;color:#312e81;text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:700}.hidden{display:none!important}
+.cta{display:inline-block;margin-top:20px;margin-right:8px;background:#fff;color:#312e81;text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:700}.cta.secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.65)}.hidden{display:none!important}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.stat,.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 14px rgba(15,23,42,.04)}
 .stat{padding:18px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}.value{font-size:25px;font-weight:800;margin-top:6px}.detail{font-size:12px;color:var(--muted);margin-top:4px}
 .card{padding:20px;margin-top:16px}.card h2{font-size:20px;margin:0}.section-head{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-bottom:14px}.section-note{color:var(--muted);font-size:12px}
@@ -31,6 +31,7 @@
   <h1 id="siteTitle"></h1>
   <p class="sub">Standings, live pool action and entirely unnecessary data.</p>
   <a id="pickButton" class="cta hidden" target="_blank">Make Week <span id="weekButton"></span> Picks →</a>
+  <a class="cta secondary" href="history.html">Historical Picks →</a>
 </section>
 
 <section class="grid">
