@@ -37,7 +37,7 @@
 <section class="grid">
   <div class="stat"><div class="label">Week <span class="wk"></span> Submitted</div><div class="value" id="submitted">0 / 51</div><div class="detail">valid cards received</div></div>
   <div class="stat"><div class="label">Next Lock</div><div class="value" id="nextLock">—</div><div class="detail" id="nextLockDetail">—</div></div>
-  <div class="stat"><div class="label">Last Week&#39;s Winner</div><div class="value" id="liveLeader">—</div><div class="detail" id="liveLeaderDetail">Week 4 winner</div></div>
+  <div class="stat"><div class="label">Last Week&#39;s Winner</div><div class="value" id="liveLeader">—</div><div class="detail" id="liveLeaderDetail">Week 5 winner</div></div>
   <div class="stat"><div class="label">Prize Pool</div><div class="value" id="prizePool">—</div><div class="detail">society retains some standards</div></div>
 </section>
 
@@ -45,7 +45,7 @@
   <div class="section-head"><div><h2>Find My Card</h2><div class="section-note">Confirm your card is in. Picks reveal only after kickoff.</div></div></div>
   <div class="my-card">
     <select id="playerSelect" class="select"><option value="">Choose a player…</option></select>
-    <div id="myCardResults"><div class="locked">Week 5 card lookup will activate when the slate is live.</div></div>
+    <div id="myCardResults"><div class="locked">Week 6 card lookup will activate when the slate is live.</div></div>
   </div>
 </section>
 
@@ -59,8 +59,8 @@
   <div class="card">
     <div class="section-head">
       <div>
-        <h2>Week 4 Hangover</h2>
-        <div class="section-note">Something to look at while Week 5 waits for us to make bad decisions.</div>
+        <h2>Week 5 Hangover</h2>
+        <div class="section-note">Something to look at while Week 6 waits for us to make bad decisions.</div>
       </div>
     </div>
     <div id="week3SpecialNote" class="locked" style="margin-bottom:12px;display:none"></div><div id="week2Hangover" class="fun-grid"></div>
@@ -69,8 +69,8 @@
     <div class="card">
       <div class="section-head">
         <div>
-          <h2>First Quarter Champion</h2>
-          <div class="section-note">The opening mini-title is complete.</div>
+          <h2>Halftime Adjustment Race</h2>
+          <div class="section-note">Weeks 5–9 • four weeks remain.</div>
         </div>
       </div>
       <div id="titleRaceRecap" class="perfect-list"></div>
@@ -78,8 +78,8 @@
     <div class="card">
       <div class="section-head">
         <div>
-          <h2>Week 4 Scoreboard</h2>
-          <div class="section-note">One perfect card, one near-perfect card and plenty of mediocrity.</div>
+          <h2>Week 5 Scoreboard</h2>
+          <div class="section-note">Nobody got past five wins. Vegas survived.</div>
         </div>
       </div>
       <div id="week2Distribution" class="perfect-list"></div>
@@ -89,15 +89,15 @@
 
 <section class="two-col">
   <div class="card">
-    <div class="section-head"><div><h2>Overall Standings</h2><div class="section-note">Through Week 4 • best 12 of 14 will count</div></div><input id="standingsSearch" class="search" placeholder="Find a player…"></div>
+    <div class="section-head"><div><h2>Overall Standings</h2><div class="section-note">Through Week 5 • best 12 of 14 will count</div></div><input id="standingsSearch" class="search" placeholder="Find a player…"></div>
     <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead><tbody id="standingsBody"></tbody></table></div>
   </div>
   <div class="card">
-    <div class="section-head"><div><h2>First Quarter Final</h2><div class="section-note">Weeks 1–4 • final standings</div></div></div>
+    <div class="section-head"><div><h2>Halftime Adjustment Standings</h2><div class="section-note">Weeks 5–9 • Week 5 complete</div></div></div>
     <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th></tr></thead><tbody id="firstQuarterBody"></tbody></table></div>
   </div>
 </section>
-<div class="footer">Standings updated <span id="lastUpdated">—</span> • Week 5 slate coming next</div>
+<div class="footer">Standings updated <span id="lastUpdated">—</span> • Week 6 slate coming next</div>
 </main>
 
 <script src="data.js"></script>
@@ -186,7 +186,9 @@
     const race=$("titleRaceRecap");
     if(race){
       const t=r.titleRace||{};
-      if(t.closed){
+      if(t.summary){
+        race.innerHTML='<strong>'+esc(t.summary)+'</strong>'+(t.detail?'<br><br><span>'+esc(t.detail)+'</span>':'');
+      }else if(t.closed){
         race.innerHTML=
           '<strong>🏆 '+esc(t.champion||"—")+' — '+esc(t.championScore||"")+'</strong>'+
           '<br><span>Runner-up: '+esc(t.runnerUp||"—")+' — '+esc(t.runnerUpScore||"")+'</span>'+
