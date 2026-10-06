@@ -673,7 +673,103 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       0
     ]
   ],
-  "weekGames": [],
+  "weekGames": [
+    {
+      "key": "IOWA-WASH",
+      "kickoff": "2026-10-09T21:00:00-04:00",
+      "matchup": "#20 Iowa at Washington"
+    },
+    {
+      "key": "ISU-BYU",
+      "kickoff": "2026-10-09T22:15:00-04:00",
+      "matchup": "Iowa State at #8 BYU"
+    },
+    {
+      "key": "IND-NEB",
+      "kickoff": "2026-10-10T12:00:00-04:00",
+      "matchup": "#7 Indiana at Nebraska"
+    },
+    {
+      "key": "TAMU-MIZ",
+      "kickoff": "2026-10-10T12:00:00-04:00",
+      "matchup": "Texas A&M at #14 Missouri"
+    },
+    {
+      "key": "UCF-OKST",
+      "kickoff": "2026-10-10T12:00:00-04:00",
+      "matchup": "UCF at #18 Oklahoma State"
+    },
+    {
+      "key": "UNC-PITT",
+      "kickoff": "2026-10-10T12:00:00-04:00",
+      "matchup": "North Carolina at #25 Pittsburgh"
+    },
+    {
+      "key": "SC-FLA",
+      "kickoff": "2026-10-10T12:45:00-04:00",
+      "matchup": "South Carolina at #16 Florida"
+    },
+    {
+      "key": "STAN-ND",
+      "kickoff": "2026-10-10T15:30:00-04:00",
+      "matchup": "Stanford at #3 Notre Dame"
+    },
+    {
+      "key": "TEX-OU",
+      "kickoff": "2026-10-10T15:30:00-04:00",
+      "matchup": "#1 Texas vs. Oklahoma"
+    },
+    {
+      "key": "HOU-KSU",
+      "kickoff": "2026-10-10T15:30:00-04:00",
+      "matchup": "#22 Houston at Kansas State"
+    },
+    {
+      "key": "UCLA-ORE",
+      "kickoff": "2026-10-10T15:30:00-04:00",
+      "matchup": "#21 UCLA at #13 Oregon"
+    },
+    {
+      "key": "MISS-VAN",
+      "kickoff": "2026-10-10T15:30:00-04:00",
+      "matchup": "#9 Ole Miss at Vanderbilt"
+    },
+    {
+      "key": "MD-OSU",
+      "kickoff": "2026-10-10T16:15:00-04:00",
+      "matchup": "Maryland at #5 Ohio State"
+    },
+    {
+      "key": "TENN-ARK",
+      "kickoff": "2026-10-10T16:15:00-04:00",
+      "matchup": "#15 Tennessee at Arkansas"
+    },
+    {
+      "key": "LSU-UK",
+      "kickoff": "2026-10-10T19:00:00-04:00",
+      "matchup": "#10 LSU at Kentucky"
+    },
+    {
+      "key": "USC-PSU",
+      "kickoff": "2026-10-10T19:30:00-04:00",
+      "matchup": "#19 USC at Penn State"
+    },
+    {
+      "key": "UGA-BAMA",
+      "kickoff": "2026-10-10T19:30:00-04:00",
+      "matchup": "#2 Georgia at #6 Alabama"
+    },
+    {
+      "key": "KAN-UTAH",
+      "kickoff": "2026-10-10T22:15:00-04:00",
+      "matchup": "Kansas at #12 Utah"
+    },
+    {
+      "key": "BOISE-FRES",
+      "kickoff": "2026-10-10T22:30:00-04:00",
+      "matchup": "#23 Boise State at Fresno State"
+    }
+  ],
   "offBoardGames": [],
   "previousWeekRecap": {
     "week": 5,
@@ -727,6 +823,7 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "detail": "Halftime Adjustment • Weeks 5–9 • four weeks remain"
     }
   },
-  "slateNote": "Week 6 matchups and pool lines are coming next.",
-  "lastUpdated": "Oct 4, 2026"
+  "slateNote": "19 playable Week 6 games. Official pool lines are frozen.",
+  "lastUpdated": "Oct 5, 2026",
+  "week6Tiebreaker": "#2 Georgia at #6 Alabama"
 });
