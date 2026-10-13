@@ -673,7 +673,88 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       0
     ]
   ],
-  "weekGames": [],
+  "weekGames": [
+    {
+      "key": "UVA-SMU",
+      "kickoff": "2026-10-17T12:00:00-04:00",
+      "matchup": "Virginia at #24 SMU"
+    },
+    {
+      "key": "NW-MSU",
+      "kickoff": "2026-10-17T12:00:00-04:00",
+      "matchup": "#25 Northwestern at Michigan State"
+    },
+    {
+      "key": "FLA-TEX",
+      "kickoff": "2026-10-17T12:00:00-04:00",
+      "matchup": "Florida at #7 Texas"
+    },
+    {
+      "key": "MSST-LSU",
+      "kickoff": "2026-10-17T12:00:00-04:00",
+      "matchup": "#16 Mississippi State at #22 LSU"
+    },
+    {
+      "key": "OSU-IND",
+      "kickoff": "2026-10-17T12:00:00-04:00",
+      "matchup": "#4 Ohio State at #5 Indiana"
+    },
+    {
+      "key": "ASU-TTU",
+      "kickoff": "2026-10-17T15:30:00-04:00",
+      "matchup": "Arizona State at #10 Texas Tech"
+    },
+    {
+      "key": "AUB-UGA",
+      "kickoff": "2026-10-17T15:30:00-04:00",
+      "matchup": "Auburn at #1 Georgia"
+    },
+    {
+      "key": "MIZ-MISS",
+      "kickoff": "2026-10-17T15:30:00-04:00",
+      "matchup": "#13 Missouri at #9 Ole Miss"
+    },
+    {
+      "key": "BAMA-TENN",
+      "kickoff": "2026-10-17T15:30:00-04:00",
+      "matchup": "#6 Alabama at #14 Tennessee"
+    },
+    {
+      "key": "FSU-MIA",
+      "kickoff": "2026-10-17T19:00:00-04:00",
+      "matchup": "Florida State at #3 Miami"
+    },
+    {
+      "key": "OKST-HOU",
+      "kickoff": "2026-10-17T19:30:00-04:00",
+      "matchup": "#18 Oklahoma State at #20 Houston"
+    },
+    {
+      "key": "WISC-UCLA",
+      "kickoff": "2026-10-17T19:30:00-04:00",
+      "matchup": "Wisconsin at #12 UCLA"
+    },
+    {
+      "key": "ND-BYU",
+      "kickoff": "2026-10-17T19:30:00-04:00",
+      "matchup": "#2 Notre Dame at #8 BYU"
+    },
+    {
+      "key": "UK-OU",
+      "kickoff": "2026-10-17T19:30:00-04:00",
+      "matchup": "#15 Kentucky at Oklahoma"
+    },
+    {
+      "key": "UTAH-COLO",
+      "kickoff": "2026-10-17T22:15:00-04:00",
+      "matchup": "#11 Utah at Colorado"
+    },
+    {
+      "key": "WAKE-CAL",
+      "kickoff": "2026-10-17T22:30:00-04:00",
+      "matchup": "#21 Wake Forest at California"
+    }
+  ],
   "offBoardGames": [],
   "previousWeekRecap": {
     "week": 6,
@@ -731,6 +812,7 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "detail": "Halftime Adjustment • Weeks 5–9 • three weeks remain"
     }
   },
-  "slateNote": "Week 7 matchups and lines will populate once the new poll and board are ready.",
-  "lastUpdated": "Oct 11, 2026"
+  "slateNote": "16 playable Week 7 games. Official pool lines are frozen.",
+  "lastUpdated": "Oct 13, 2026",
+  "week7Tiebreaker": "#4 Ohio State at #5 Indiana"
 });
