@@ -18,7 +18,7 @@
 .window{margin-top:16px}.window:first-child{margin-top:0}.window h3{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:#475569}.game-row{border:1px solid var(--line);border-radius:12px;margin-bottom:8px;background:#fff;overflow:hidden}
 .game-summary{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:12px 14px;cursor:pointer}.game-name{font-weight:800}.game-time,.action-count{font-size:12px;color:var(--muted);white-space:nowrap}.action-count{font-weight:700}.game-detail{padding:0 14px 14px}
 .sides{display:grid;grid-template-columns:1fr 1fr;gap:10px}.side{border:1px solid var(--line);border-radius:10px;padding:10px}.side strong{display:block}.pct{font-size:20px;font-weight:800}.names{font-size:12px;color:var(--muted);line-height:1.45;margin-top:6px}
-.two-col{display:grid;grid-template-columns:1.65fr 1fr;gap:16px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:9px 8px;border-bottom:1px solid var(--line)}td{padding:10px 8px;border-bottom:1px solid #eef2f7}.rank{font-weight:800;width:58px}.leader{font-weight:800;color:var(--good)}.up{color:var(--good);font-weight:700}.down{color:var(--bad);font-weight:700}
+.two-col{display:grid;grid-template-columns:1.65fr 1fr;gap:16px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:9px 8px;border-bottom:1px solid var(--line)}td{padding:10px 8px;border-bottom:1px solid #eef2f7}.rank{font-weight:800;width:58px}.leader{font-weight:800;color:var(--good)}.up{color:var(--good);font-weight:700}.down{color:var(--bad);font-weight:700}.standings-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.view-tabs{display:flex;gap:6px}.view-btn{border:1px solid var(--line);background:#fff;color:#334155;border-radius:9px;padding:9px 11px;font-size:12px;font-weight:800;cursor:pointer}.view-btn.active{background:#111827;color:#fff;border-color:#111827}.standings-controls .search{min-width:190px}
 .fun-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.recap-card{padding:14px;border:1px solid var(--line);border-radius:12px}.recap-card strong{display:block;font-size:18px;margin:4px 0}.recap-card small{color:var(--muted)}.fun{padding:14px;border:1px solid var(--line);border-radius:12px}.fun strong{display:block;font-size:18px;margin:4px 0}.fun small{color:var(--muted)}.perfect-list{line-height:1.6;font-size:14px}.footer{color:var(--muted);font-size:12px;text-align:center;margin-top:22px}
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.two-col,.my-card{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.search{max-width:none}.game-summary{grid-template-columns:1fr}.game-time,.action-count{white-space:normal}}
 @media(max-width:520px){.grid,.fun-grid,.sides{grid-template-columns:1fr}h1{font-size:28px}.hero{padding:22px}}
@@ -45,7 +45,7 @@
   <div class="section-head"><div><h2>Find My Card</h2><div class="section-note">Confirm your card is in. Picks reveal only after kickoff.</div></div></div>
   <div class="my-card">
     <select id="playerSelect" class="select"><option value="">Choose a player…</option></select>
-    <div id="myCardResults"><div class="locked">Week 7 card lookup will activate when the slate is live.</div></div>
+    <div id="myCardResults"><div class="locked">Week 8 card lookup will activate when the slate is live.</div></div>
   </div>
 </section>
 
@@ -59,8 +59,8 @@
   <div class="card">
     <div class="section-head">
       <div>
-        <h2>Week 6 Hangover</h2>
-        <div class="section-note">Something to look at while Week 7 waits for us to make bad decisions.</div>
+        <h2>Week 7 Hangover</h2>
+        <div class="section-note">Something to look at while Week 8 waits for us to make bad decisions.</div>
       </div>
     </div>
     <div id="week3SpecialNote" class="locked" style="margin-bottom:12px;display:none"></div><div id="week2Hangover" class="fun-grid"></div>
@@ -70,7 +70,7 @@
       <div class="section-head">
         <div>
           <h2>Halftime Adjustment Race</h2>
-          <div class="section-note">Weeks 5–9 • three weeks remain.</div>
+          <div class="section-note">Weeks 5–9 • two weeks remain.</div>
         </div>
       </div>
       <div id="titleRaceRecap" class="perfect-list"></div>
@@ -78,8 +78,8 @@
     <div class="card">
       <div class="section-head">
         <div>
-          <h2>Week 6 Scoreboard</h2>
-          <div class="section-note">Berry stood alone at 6-1. The rest of us were mortal.</div>
+          <h2>Week 7 Scoreboard</h2>
+          <div class="section-note">Two 6-1 cards. Andrew Rensi won the tiebreaker by one point.</div>
         </div>
       </div>
       <div id="week2Distribution" class="perfect-list"></div>
@@ -89,22 +89,32 @@
 
 <section class="two-col">
   <div class="card">
-    <div class="section-head"><div><h2>Overall Standings</h2><div class="section-note">Through Week 6 • best 12 of 14 will count</div></div><input id="standingsSearch" class="search" placeholder="Find a player…"></div>
-    <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead><tbody id="standingsBody"></tbody></table></div>
+    <div class="section-head">
+      <div><h2>Overall Standings</h2><div id="standingsNote" class="section-note">Through Week 7 • official raw standings</div></div>
+      <div class="standings-controls">
+        <div class="view-tabs">
+          <button id="officialStandingsBtn" class="view-btn active" type="button">Official</button>
+          <button id="dropStandingsBtn" class="view-btn" type="button">Two drops applied</button>
+        </div>
+        <input id="standingsSearch" class="search" placeholder="Find a player…">
+      </div>
+    </div>
+    <div id="dropExplainer" class="locked hidden" style="margin-bottom:12px">Preview only: the final standings use each player's best 12 of 14 weeks. This view applies that rule today by dropping each player's two lowest weekly scores — currently best 5 of 7. Dropped weeks can change as the season continues.</div>
+    <div class="table-wrap"><table><thead><tr id="standingsHeader"><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead><tbody id="standingsBody"></tbody></table></div>
   </div>
   <div class="card">
-    <div class="section-head"><div><h2>Halftime Adjustment Standings</h2><div class="section-note">Weeks 5–9 • Weeks 5–6 complete</div></div></div>
+    <div class="section-head"><div><h2>Halftime Adjustment Standings</h2><div class="section-note">Weeks 5–9 • Weeks 5–7 complete</div></div></div>
     <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th></tr></thead><tbody id="firstQuarterBody"></tbody></table></div>
   </div>
 </section>
-<div class="footer">Standings updated <span id="lastUpdated">—</span> • Week 7 slate coming next</div>
+<div class="footer">Standings updated <span id="lastUpdated">—</span> • Week 8 slate coming next</div>
 </main>
 
 <script src="data.js"></script>
 <script src="week.js"></script>
 <script>
 (async function(){
-  const d=window.PICKEM_DATA||{}, standings=d.standings||[], games=d.weekGames||[]; let feed=[];
+  const d=window.PICKEM_DATA||{}, standings=d.standings||[], dropAdjusted=d.dropAdjusted||[], games=d.weekGames||[]; let feed=[], standingsMode="official";
   const $=id=>document.getElementById(id);
   const esc=v=>String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
   const dt=x=>new Date(x);
@@ -116,8 +126,10 @@
 
   standings.map(r=>r[1]).sort((a,b)=>a.localeCompare(b)).forEach(n=>{const o=document.createElement("option");o.value=n;o.textContent=n;$("playerSelect").appendChild(o);});
   $("playerSelect").addEventListener("change",()=>renderMyCard($("playerSelect").value));
-  $("standingsSearch").addEventListener("input",function(){const q=this.value.trim().toLowerCase();renderStandings(!q?standings:standings.filter(r=>String(r[1]).toLowerCase().includes(q)));});
-  renderStandings(standings); renderFirstQuarter();
+  $("standingsSearch").addEventListener("input",renderStandingsView);
+  $("officialStandingsBtn").addEventListener("click",()=>{standingsMode="official";renderStandingsView();});
+  $("dropStandingsBtn").addEventListener("click",()=>{standingsMode="adjusted";renderStandingsView();});
+  renderStandingsView(); renderFirstQuarter();
 
   if(d.publicFeedCsvUrl){try{feed=await loadCsv(d.publicFeedCsvUrl);}catch(e){console.error(e);}}
   renderTop(); renderMyCard(""); renderOffBoardNote(); renderPoolAction(); renderPreviousWeekRecap();
@@ -275,9 +287,35 @@
 
 
 
+  function renderStandingsView(){
+    const adjusted=standingsMode==="adjusted";
+    $("officialStandingsBtn").classList.toggle("active",!adjusted);
+    $("dropStandingsBtn").classList.toggle("active",adjusted);
+    $("dropExplainer").classList.toggle("hidden",!adjusted);
+    $("standingsNote").textContent=adjusted
+      ?"Best 5 of 7 today • two lowest weekly scores removed"
+      :"Through Week 7 • official raw standings";
+    $("standingsHeader").innerHTML=adjusted
+      ?"<th>Rank</th><th>Player</th><th>Adjusted</th><th>Raw</th><th>Dropped weeks</th>"
+      :"<th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th>";
+    const q=$("standingsSearch").value.trim().toLowerCase();
+    const source=adjusted?dropAdjusted:standings;
+    renderStandings(!q?source:source.filter(r=>String(r[1]).toLowerCase().includes(q)));
+  }
+
   function renderStandings(rows){
     const body=$("standingsBody");body.innerHTML="";
-    rows.forEach(r=>{const mv=String(r[5]||"—"),cls=mv.startsWith("↑")?"up":mv.startsWith("↓")?"down":"";const tr=document.createElement("tr");tr.innerHTML='<td class="rank">'+r[0]+'</td><td class="'+(Number(r[0])===1?'leader':'')+'">'+esc(r[1])+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td><td class="'+cls+'">'+esc(mv)+'</td>';body.appendChild(tr);});
+    const adjusted=standingsMode==="adjusted";
+    rows.forEach(r=>{
+      const tr=document.createElement("tr");
+      if(adjusted){
+        tr.innerHTML='<td class="rank">'+r[0]+'</td><td class="'+(Number(r[0])===1?'leader':'')+'">'+esc(r[1])+'</td><td><strong>'+r[2]+'</strong></td><td>'+r[3]+'</td><td>'+esc(r[4])+'</td>';
+      }else{
+        const mv=String(r[5]||"—"),cls=mv.startsWith("↑")?"up":mv.startsWith("↓")?"down":"";
+        tr.innerHTML='<td class="rank">'+r[0]+'</td><td class="'+(Number(r[0])===1?'leader':'')+'">'+esc(r[1])+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td><td class="'+cls+'">'+esc(mv)+'</td>';
+      }
+      body.appendChild(tr);
+    });
   }
 
   function renderFirstQuarter(){
