@@ -673,7 +673,93 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       4
     ]
   ],
-  "weekGames": [],
+  "weekGames": [
+    {
+      "key": "TTU-CIN",
+      "kickoff": "2026-10-24T12:00:00-04:00",
+      "matchup": "#8 Texas Tech at Cincinnati"
+    },
+    {
+      "key": "LSU-AUB",
+      "kickoff": "2026-10-24T12:00:00-04:00",
+      "matchup": "#18 LSU at Auburn"
+    },
+    {
+      "key": "CAL-SMU",
+      "kickoff": "2026-10-24T12:00:00-04:00",
+      "matchup": "California at #23 SMU"
+    },
+    {
+      "key": "PITT-MIA",
+      "kickoff": "2026-10-24T12:00:00-04:00",
+      "matchup": "Pittsburgh at #1 Miami"
+    },
+    {
+      "key": "RUT-NW",
+      "kickoff": "2026-10-24T12:00:00-04:00",
+      "matchup": "Rutgers at #24 Northwestern"
+    },
+    {
+      "key": "IND-MICH",
+      "kickoff": "2026-10-24T12:00:00-04:00",
+      "matchup": "#6 Indiana at Michigan"
+    },
+    {
+      "key": "TAMU-BAMA",
+      "kickoff": "2026-10-24T15:30:00-04:00",
+      "matchup": "Texas A&M at #13 Alabama"
+    },
+    {
+      "key": "IOWA-MINN",
+      "kickoff": "2026-10-24T15:30:00-04:00",
+      "matchup": "#15 Iowa at Minnesota"
+    },
+    {
+      "key": "BYU-UCF",
+      "kickoff": "2026-10-24T15:30:00-04:00",
+      "matchup": "#2 BYU at UCF"
+    },
+    {
+      "key": "MSU-UCLA",
+      "kickoff": "2026-10-24T15:30:00-04:00",
+      "matchup": "Michigan State at #9 UCLA"
+    },
+    {
+      "key": "TENN-SC",
+      "kickoff": "2026-10-24T15:30:00-04:00",
+      "matchup": "#11 Tennessee at South Carolina"
+    },
+    {
+      "key": "BOISE-WSU",
+      "kickoff": "2026-10-24T18:00:00-04:00",
+      "matchup": "#21 Boise State at Washington State"
+    },
+    {
+      "key": "USC-WISC",
+      "kickoff": "2026-10-24T19:30:00-04:00",
+      "matchup": "#16 USC at Wisconsin"
+    },
+    {
+      "key": "VAN-UK",
+      "kickoff": "2026-10-24T19:30:00-04:00",
+      "matchup": "Vanderbilt at #12 Kentucky"
+    },
+    {
+      "key": "ISU-ARIZ",
+      "kickoff": "2026-10-24T19:30:00-04:00",
+      "matchup": "Iowa State at #25 Arizona"
+    },
+    {
+      "key": "MISS-TEX",
+      "kickoff": "2026-10-24T19:30:00-04:00",
+      "matchup": "#7 Ole Miss at #19 Texas"
+    },
+    {
+      "key": "HOU-UTAH",
+      "kickoff": "2026-10-24T22:15:00-04:00",
+      "matchup": "#14 Houston at #10 Utah"
+    }
+  ],
   "offBoardGames": [],
   "previousWeekRecap": {
     "week": 7,
@@ -729,8 +815,8 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "detail": "Andrew Davis, Dan Ubilla, David Lasky and Hamilton Evans are two back at 14 • two weeks remain"
     }
   },
-  "slateNote": "Week 8 matchups and lines will populate once the new poll and board are ready.",
-  "lastUpdated": "Oct 18, 2026",
+  "slateNote": "17 playable Week 8 games. Official pool lines are frozen.",
+  "lastUpdated": "Oct 20, 2026",
   "week7Tiebreaker": "#4 Ohio State at #5 Indiana",
   "dropAdjusted": [
     [
@@ -1192,5 +1278,6 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       0,
       2
     ]
-  ]
+  ],
+  "week8Tiebreaker": "#7 Ole Miss at #19 Texas"
 });
