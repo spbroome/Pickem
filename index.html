@@ -45,7 +45,7 @@
   <div class="section-head"><div><h2>Find My Card</h2><div class="section-note">Confirm your card is in. Picks reveal only after kickoff.</div></div></div>
   <div class="my-card">
     <select id="playerSelect" class="select"><option value="">Choose a player…</option></select>
-    <div id="myCardResults"><div class="locked">Week 8 card lookup will activate when the slate is live.</div></div>
+    <div id="myCardResults"><div class="locked">Week 9 card lookup will activate when the slate is live.</div></div>
   </div>
 </section>
 
@@ -59,8 +59,8 @@
   <div class="card">
     <div class="section-head">
       <div>
-        <h2>Week 7 Hangover</h2>
-        <div class="section-note">Something to look at while Week 8 waits for us to make bad decisions.</div>
+        <h2>Week 8 Hangover</h2>
+        <div class="section-note">Something to look at while Week 9 waits for us to make bad decisions.</div>
       </div>
     </div>
     <div id="week3SpecialNote" class="locked" style="margin-bottom:12px;display:none"></div><div id="week2Hangover" class="fun-grid"></div>
@@ -70,7 +70,7 @@
       <div class="section-head">
         <div>
           <h2>Halftime Adjustment Race</h2>
-          <div class="section-note">Weeks 5–9 • two weeks remain.</div>
+          <div class="section-note">Weeks 5–9 • one week remains.</div>
         </div>
       </div>
       <div id="titleRaceRecap" class="perfect-list"></div>
@@ -78,8 +78,8 @@
     <div class="card">
       <div class="section-head">
         <div>
-          <h2>Week 7 Scoreboard</h2>
-          <div class="section-note">Two 6-1 cards. Andrew Rensi won the tiebreaker by one point.</div>
+          <h2>Week 8 Scoreboard</h2>
+          <div class="section-note">Four players reached six wins. Sara Bonnot won the tiebreaker by one point.</div>
         </div>
       </div>
       <div id="week2Distribution" class="perfect-list"></div>
@@ -90,7 +90,7 @@
 <section class="two-col">
   <div class="card">
     <div class="section-head">
-      <div><h2>Overall Standings</h2><div id="standingsNote" class="section-note">Through Week 7 • official raw standings</div></div>
+      <div><h2>Overall Standings</h2><div id="standingsNote" class="section-note">Through Week 8 • official raw standings</div></div>
       <div class="standings-controls">
         <div class="view-tabs">
           <button id="officialStandingsBtn" class="view-btn active" type="button">Official</button>
@@ -99,15 +99,15 @@
         <input id="standingsSearch" class="search" placeholder="Find a player…">
       </div>
     </div>
-    <div id="dropExplainer" class="locked hidden" style="margin-bottom:12px">Preview only: the final standings use each player's best 12 of 14 weeks. This view applies that rule today by dropping each player's two lowest weekly scores — currently best 5 of 7. Dropped weeks can change as the season continues.</div>
+    <div id="dropExplainer" class="locked hidden" style="margin-bottom:12px">Preview only: the final standings use each player's best 12 of 14 weeks. This view applies that rule today by dropping each player's two lowest weekly scores — currently best 6 of 8. Dropped weeks can change as the season continues.</div>
     <div class="table-wrap"><table><thead><tr id="standingsHeader"><th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th></tr></thead><tbody id="standingsBody"></tbody></table></div>
   </div>
   <div class="card">
-    <div class="section-head"><div><h2>Halftime Adjustment Standings</h2><div class="section-note">Weeks 5–9 • Weeks 5–7 complete</div></div></div>
+    <div class="section-head"><div><h2>Halftime Adjustment Standings</h2><div class="section-note">Weeks 5–9 • Weeks 5–8 complete</div></div></div>
     <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Score</th></tr></thead><tbody id="firstQuarterBody"></tbody></table></div>
   </div>
 </section>
-<div class="footer">Standings updated <span id="lastUpdated">—</span> • Week 8 slate coming next</div>
+<div class="footer">Standings updated <span id="lastUpdated">—</span> • Week 9 slate coming next</div>
 </main>
 
 <script src="data.js"></script>
@@ -293,8 +293,8 @@
     $("dropStandingsBtn").classList.toggle("active",adjusted);
     $("dropExplainer").classList.toggle("hidden",!adjusted);
     $("standingsNote").textContent=adjusted
-      ?"Best 5 of 7 today • two lowest weekly scores removed"
-      :"Through Week 7 • official raw standings";
+      ?"Best 6 of 8 today • two lowest weekly scores removed"
+      :"Through Week 8 • official raw standings";
     $("standingsHeader").innerHTML=adjusted
       ?"<th>Rank</th><th>Player</th><th>Adjusted</th><th>Raw</th><th>Dropped weeks</th>"
       :"<th>Rank</th><th>Player</th><th>Score</th><th>Weekly Wins</th><th>Movement</th>";
