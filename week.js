@@ -673,7 +673,98 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       4
     ]
   ],
-  "weekGames": [],
+  "weekGames": [
+    {
+      "key": "WISC-IOWA",
+      "kickoff": "2026-10-31T12:00:00-04:00",
+      "matchup": "#25 Wisconsin at Iowa"
+    },
+    {
+      "key": "SMU-SYR",
+      "kickoff": "2026-10-31T12:00:00-04:00",
+      "matchup": "#19 SMU at Syracuse"
+    },
+    {
+      "key": "ND-NAVY",
+      "kickoff": "2026-10-31T12:00:00-04:00",
+      "matchup": "#5 Notre Dame at Navy"
+    },
+    {
+      "key": "ARIZ-TTU",
+      "kickoff": "2026-10-31T12:00:00-04:00",
+      "matchup": "#22 Arizona at #13 Texas Tech"
+    },
+    {
+      "key": "AUB-MISS",
+      "kickoff": "2026-10-31T12:45:00-04:00",
+      "matchup": "Auburn at #12 Ole Miss"
+    },
+    {
+      "key": "FLA-UGA",
+      "kickoff": "2026-10-31T15:30:00-04:00",
+      "matchup": "#17 Florida vs. #3 Georgia"
+    },
+    {
+      "key": "MINN-IND",
+      "kickoff": "2026-10-31T15:30:00-04:00",
+      "matchup": "Minnesota at #4 Indiana"
+    },
+    {
+      "key": "NW-ORE",
+      "kickoff": "2026-10-31T15:30:00-04:00",
+      "matchup": "#20 Northwestern at Oregon"
+    },
+    {
+      "key": "ASU-BYU",
+      "kickoff": "2026-10-31T15:30:00-04:00",
+      "matchup": "Arizona State at #8 BYU"
+    },
+    {
+      "key": "UTAH-CIN",
+      "kickoff": "2026-10-31T15:45:00-04:00",
+      "matchup": "#6 Utah at Cincinnati"
+    },
+    {
+      "key": "UVA-WAKE",
+      "kickoff": "2026-10-31T15:45:00-04:00",
+      "matchup": "Virginia at #14 Wake Forest"
+    },
+    {
+      "key": "NEV-UCLA",
+      "kickoff": "2026-10-31T16:15:00-04:00",
+      "matchup": "Nevada at #7 UCLA"
+    },
+    {
+      "key": "OKST-ISU",
+      "kickoff": "2026-10-31T19:00:00-04:00",
+      "matchup": "#24 Oklahoma State at Iowa State"
+    },
+    {
+      "key": "MIA-UNC",
+      "kickoff": "2026-10-31T19:30:00-04:00",
+      "matchup": "#1 Miami at North Carolina"
+    },
+    {
+      "key": "MSST-TEX",
+      "kickoff": "2026-10-31T19:30:00-04:00",
+      "matchup": "Mississippi State at #11 Texas"
+    },
+    {
+      "key": "OSU-USC",
+      "kickoff": "2026-10-31T19:30:00-04:00",
+      "matchup": "#2 Ohio State at USC"
+    },
+    {
+      "key": "MIZ-ARK",
+      "kickoff": "2026-10-31T19:45:00-04:00",
+      "matchup": "#23 Missouri at Arkansas"
+    },
+    {
+      "key": "TXST-BSU",
+      "kickoff": "2026-10-31T22:00:00-04:00",
+      "matchup": "Texas State at #20 Boise State"
+    }
+  ],
   "offBoardGames": [],
   "previousWeekRecap": {
     "week": 8,
@@ -743,8 +834,8 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "detail": "Dan Ubilla and David Lasky are three back at 18 • one week remains"
     }
   },
-  "slateNote": "Week 9 matchups and lines will populate once the new poll and board are ready.",
-  "lastUpdated": "Oct 25, 2026",
+  "slateNote": "18 playable Week 9 games. Official pool lines are frozen.",
+  "lastUpdated": "Oct 27, 2026",
   "week7Tiebreaker": "#4 Ohio State at #5 Indiana",
   "dropAdjusted": [
     [
@@ -1206,5 +1297,6 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       0,
       2
     ]
-  ]
+  ],
+  "week9Tiebreaker": "#22 Arizona at #13 Texas Tech"
 });
