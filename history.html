@@ -82,7 +82,9 @@ select,input{width:100%;border:1px solid var(--line);border-radius:9px;padding:1
   const d=window.PICKEM_HISTORY||{weeks:[],participants:[]};
   const $=id=>document.getElementById(id);
   const esc=v=>String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
-  const winners=Object.fromEntries((d.weeks||[]).map(w=>[w.week,(w.winnerNames&&w.winnerNames.length?w.winnerNames:String(w.winner||"").split(" / ").filter(Boolean))]));
+  function winnerNames(w){
+    return String(w && w.winner || "").split("/").map(x=>x.trim()).filter(Boolean);
+  }
 
   d.weeks.forEach(w=>{
     const o=document.createElement("option");o.value=w.week;o.textContent=w.label;$("weekSelect").appendChild(o);
@@ -137,7 +139,7 @@ select,input{width:100%;border:1px solid var(--line);border-radius:9px;padding:1
     if(!cards.length){list.innerHTML='<div class="empty">No matching player.</div>';return;}
     cards.forEach(c=>{
       const row=document.createElement("div");
-      const isWinner=(winners[w.week]||[]).includes(c.player);
+      const isWinner=winnerNames(w).includes(c.player);
       row.className="player-row"+(isWinner?" winner":"");
       let left='<div><div class="player-name">'+(isWinner?'🏆 ':'')+esc(c.player)+'</div><span class="record">'+esc(c.record)+'</span>';
       if(c.submitted) left+='<div class="meta">Tiebreaker: '+esc(c.tiebreaker??"—")+(c.note?' • '+esc(c.note):'')+'</div>';
@@ -157,7 +159,7 @@ select,input{width:100%;border:1px solid var(--line);border-radius:9px;padding:1
       '<div><div class="label">Correct picks</div><div class="season-total">'+totalWins+'</div><div class="detail">'+weeksPlayed+' week'+(weeksPlayed===1?'':'s')+' played</div></div></div>';
 
     cards.forEach(({week,card})=>{
-      const isWinner=(winners[week.week]||[]).includes(player);
+      const isWinner=winnerNames(week).includes(player);
       html+='<div class="week-card"><h3>'+(isWinner?'🏆 ':'')+'Week '+week.week+' — '+esc(card.record)+'</h3>';
       if(card.submitted){
         html+='<div class="picks">'+card.picks.map(pickHtml).join("")+'</div>';

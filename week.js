@@ -1,403 +1,403 @@
 window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
-  "currentWeek": 9,
+  "currentWeek": 10,
   "participants": 51,
   "prizePool": 2550,
-  "lastWinner": "Sara Bonnot",
+  "lastWinner": "Jason Wiggam",
   "lastWinnerScore": "6-1",
-  "overallLeader": "Hamilton Evans",
-  "overallLeaderScore": 32,
+  "overallLeader": "Noah Harris",
+  "overallLeaderScore": 38,
   "standings": [
     [
       1,
+      "Noah Harris",
+      38,
+      0,
+      9,
+      "↑4"
+    ],
+    [
+      2,
       "Andrew Rensi",
-      34,
+      37,
       1,
-      8,
-      "↑3"
+      9,
+      "↓1"
     ],
     [
+      2,
+      "Cale Homesley",
+      37,
       1,
-      "Eric Wood",
-      34,
-      1,
-      8,
-      "↑1"
-    ],
-    [
-      1,
-      "Hamilton Evans",
-      34,
-      1,
-      8,
-      "—"
+      9,
+      "↑2"
     ],
     [
       4,
-      "Cale Homesley",
-      33,
-      1,
-      8,
-      "—"
+      "John Martin",
+      37,
+      0,
+      9,
+      "↑3"
     ],
     [
       5,
-      "Noah Harris",
-      33,
-      0,
-      8,
-      "↓2"
+      "David Lasky",
+      36,
+      2,
+      9,
+      "↑1"
     ],
     [
       6,
-      "David Lasky",
-      32,
-      2,
-      8,
-      "—"
+      "Hamilton Evans",
+      35,
+      1,
+      9,
+      "↓5"
     ],
     [
       7,
       "Bryan Pandajis",
-      31,
+      35,
       0,
-      8,
-      "↑8"
-    ],
-    [
-      7,
-      "Dan Ubilla",
-      31,
-      0,
-      8,
-      "↑4"
-    ],
-    [
-      7,
-      "John Martin",
-      31,
-      0,
-      8,
-      "↑4"
+      9,
+      "—"
     ],
     [
       7,
       "Seiji Borja",
-      31,
+      35,
       0,
-      8,
+      9,
       "—"
     ],
     [
-      11,
-      "Berry Curlee",
-      30,
-      1,
-      8,
-      "↓1"
-    ],
-    [
-      11,
-      "Sara Bonnot",
-      30,
-      1,
-      8,
-      "↑17"
-    ],
-    [
-      11,
+      9,
       "Will Martin",
-      30,
+      34,
       1,
-      8,
-      "↑8"
+      9,
+      "↑2"
     ],
     [
-      14,
-      "Ryan Smith",
-      30,
-      0,
-      8,
-      "↓7"
-    ],
-    [
-      14,
-      "Scott Winters",
-      30,
-      0,
-      8,
-      "↑14"
-    ],
-    [
-      16,
-      "Andrew Davis",
-      29,
-      0,
+      10,
+      "Eric Wood",
+      34,
+      1,
       8,
       "↓9"
     ],
     [
-      16,
-      "Ellen Evans",
-      29,
+      11,
+      "Dan Ubilla",
+      34,
       0,
-      8,
-      "↑4"
+      9,
+      "↓4"
+    ],
+    [
+      11,
+      "Scott Winters",
+      34,
+      0,
+      9,
+      "↑3"
+    ],
+    [
+      13,
+      "Ryan Smith",
+      33,
+      0,
+      9,
+      "↑1"
+    ],
+    [
+      14,
+      "Berry Curlee",
+      32,
+      1,
+      9,
+      "↓3"
+    ],
+    [
+      14,
+      "Sara Bonnot",
+      32,
+      1,
+      9,
+      "↓3"
+    ],
+    [
+      16,
+      "Andrew Davis",
+      32,
+      0,
+      9,
+      "—"
+    ],
+    [
+      16,
+      "Joseph Katke",
+      32,
+      0,
+      9,
+      "↑8"
     ],
     [
       16,
       "Ryan Slamka",
-      29,
+      32,
       0,
-      8,
-      "↓1"
+      9,
+      "—"
     ],
     [
       16,
       "Will Long",
-      29,
+      32,
       0,
-      8,
-      "↑4"
+      9,
+      "—"
     ],
     [
       20,
       "Eric Nilsson",
-      28,
+      31,
       1,
-      8,
-      "↓6"
+      9,
+      "—"
+    ],
+    [
+      21,
+      "Andrew Carson",
+      31,
+      0,
+      9,
+      "↑3"
+    ],
+    [
+      21,
+      "Andrew Rogerson",
+      31,
+      0,
+      9,
+      "↑3"
+    ],
+    [
+      21,
+      "Brent Johnson",
+      31,
+      0,
+      9,
+      "↑14"
     ],
     [
       21,
       "Colin Malone",
-      28,
+      31,
       0,
-      8,
-      "↑7"
+      9,
+      "—"
     ],
     [
       21,
-      "John Stavrinakis",
-      28,
+      "Eric Collins",
+      31,
       0,
-      8,
-      "↓6"
+      9,
+      "↑3"
+    ],
+    [
+      21,
+      "John-Thomas Carson",
+      31,
+      0,
+      9,
+      "↑3"
     ],
     [
       21,
       "Lexi Winters",
-      28,
+      31,
       0,
-      8,
-      "↓1"
+      9,
+      "—"
     ],
     [
-      24,
-      "Andrew Carson",
-      27,
-      0,
-      8,
-      "↓4"
-    ],
-    [
-      24,
-      "Andrew Rogerson",
-      27,
-      0,
-      8,
-      "↑4"
-    ],
-    [
-      24,
-      "Dave Stone",
-      27,
-      0,
-      8,
-      "↓4"
-    ],
-    [
-      24,
-      "Eric Collins",
-      27,
-      0,
-      8,
-      "↑4"
-    ],
-    [
-      24,
-      "John-Thomas Carson",
-      27,
-      0,
-      8,
-      "↓4"
-    ],
-    [
-      24,
-      "Joseph Katke",
-      27,
-      0,
-      8,
-      "↓13"
-    ],
-    [
-      24,
-      "Michael Badlam Jr",
-      27,
-      0,
-      8,
-      "↓4"
-    ],
-    [
-      24,
-      "Michael Badlam Sr",
-      27,
-      0,
-      8,
-      "↑13"
-    ],
-    [
-      24,
-      "Paul Davidson",
-      27,
-      0,
-      8,
-      "↑4"
-    ],
-    [
-      24,
+      21,
       "Spencer Broome",
-      27,
+      31,
       0,
-      8,
-      "↑17"
+      9,
+      "↑3"
     ],
     [
-      34,
-      "Maryn Rensi",
-      27,
+      29,
+      "AJ Capitelli",
+      30,
       0,
-      7,
+      9,
       "↑11"
     ],
     [
-      35,
+      29,
       "Allison Morris",
-      26,
+      30,
       0,
-      8,
-      "↓7"
+      9,
+      "↑6"
     ],
     [
-      35,
-      "Andrew Lichty",
-      26,
+      29,
+      "Ellen Evans",
+      30,
       0,
-      8,
-      "↓7"
+      9,
+      "↓13"
     ],
     [
-      35,
-      "Brent Johnson",
-      26,
+      29,
+      "John Stavrinakis",
+      30,
       0,
-      8,
-      "↓15"
+      9,
+      "↓8"
     ],
     [
-      35,
-      "Jared Weinstein",
-      26,
+      29,
+      "Michael Badlam Jr",
+      30,
       0,
-      8,
-      "↓7"
+      9,
+      "↓5"
     ],
     [
-      39,
-      "Kevin Morris",
-      26,
+      29,
+      "Michael Badlam Sr",
+      30,
       0,
-      7,
-      "↓24"
+      9,
+      "↓5"
     ],
     [
-      40,
-      "AJ Capitelli",
-      25,
+      29,
+      "Paul Davidson",
+      30,
       0,
-      8,
-      "↑1"
+      9,
+      "↓5"
     ],
     [
-      41,
-      "Joshua Manasco",
-      25,
-      0,
-      7,
-      "↑4"
-    ],
-    [
-      41,
-      "Justin Mullinax",
-      25,
-      0,
-      7,
-      "↑8"
-    ],
-    [
-      43,
-      "BJ Fife",
-      24,
-      0,
-      8,
-      "↓6"
-    ],
-    [
-      43,
-      "Brandon Myers",
-      24,
-      0,
-      8,
-      "↓6"
-    ],
-    [
-      43,
-      "Ryan Lyles",
-      24,
+      36,
+      "Maryn Rensi",
+      30,
       0,
       8,
       "↓2"
     ],
     [
-      46,
+      37,
+      "Andrew Lichty",
+      29,
+      0,
+      9,
+      "↓2"
+    ],
+    [
+      37,
+      "Dave Stone",
+      29,
+      0,
+      9,
+      "↓13"
+    ],
+    [
+      37,
       "Jacob Bonnot",
-      23,
+      29,
+      0,
+      9,
+      "↑9"
+    ],
+    [
+      37,
+      "Jared Weinstein",
+      29,
+      0,
+      9,
+      "↓2"
+    ],
+    [
+      41,
+      "Kevin Morris",
+      29,
       0,
       8,
-      "↓9"
+      "↓2"
+    ],
+    [
+      42,
+      "Jason Wiggam",
+      28,
+      1,
+      9,
+      "↑6"
+    ],
+    [
+      43,
+      "Ryan Lyles",
+      28,
+      0,
+      9,
+      "—"
+    ],
+    [
+      44,
+      "Joshua Manasco",
+      28,
+      0,
+      8,
+      "↓3"
+    ],
+    [
+      44,
+      "Justin Mullinax",
+      28,
+      0,
+      8,
+      "↓3"
     ],
     [
       46,
       "Jessica Davis",
-      23,
+      27,
       0,
-      8,
-      "↓5"
+      9,
+      "—"
+    ],
+    [
+      47,
+      "Brandon Myers",
+      26,
+      0,
+      9,
+      "↓4"
     ],
     [
       48,
       "Andy Campbell",
-      22,
+      25,
       0,
-      8,
-      "↓1"
+      9,
+      "—"
     ],
     [
       48,
-      "Jason Wiggam",
-      22,
+      "BJ Fife",
+      25,
       0,
-      8,
-      "↓1"
+      9,
+      "↓5"
     ],
     [
       50,
@@ -420,247 +420,247 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
     [
       1,
       "Andrew Rensi",
-      21
-    ],
-    [
-      2,
-      "Dan Ubilla",
-      18
+      24
     ],
     [
       2,
       "David Lasky",
-      18
+      22
+    ],
+    [
+      2,
+      "John Martin",
+      22
+    ],
+    [
+      4,
+      "Dan Ubilla",
+      21
+    ],
+    [
+      4,
+      "Noah Harris",
+      21
     ],
     [
       4,
       "Scott Winters",
-      17
-    ],
-    [
-      4,
-      "Will Long",
-      17
+      21
     ],
     [
       4,
       "Will Martin",
+      21
+    ],
+    [
+      8,
+      "Cale Homesley",
+      20
+    ],
+    [
+      8,
+      "Seiji Borja",
+      20
+    ],
+    [
+      8,
+      "Will Long",
+      20
+    ],
+    [
+      11,
+      "Jason Wiggam",
+      19
+    ],
+    [
+      11,
+      "Ryan Slamka",
+      19
+    ],
+    [
+      13,
+      "Andrew Davis",
+      18
+    ],
+    [
+      13,
+      "Andrew Rogerson",
+      18
+    ],
+    [
+      13,
+      "Berry Curlee",
+      18
+    ],
+    [
+      13,
+      "Bryan Pandajis",
+      18
+    ],
+    [
+      13,
+      "Eric Collins",
+      18
+    ],
+    [
+      13,
+      "Joseph Katke",
+      18
+    ],
+    [
+      13,
+      "Lexi Winters",
+      18
+    ],
+    [
+      13,
+      "Sara Bonnot",
+      18
+    ],
+    [
+      21,
+      "AJ Capitelli",
       17
     ],
     [
-      7,
-      "Berry Curlee",
+      21,
+      "Colin Malone",
+      17
+    ],
+    [
+      21,
+      "Hamilton Evans",
+      17
+    ],
+    [
+      21,
+      "John Stavrinakis",
+      17
+    ],
+    [
+      21,
+      "Joshua Manasco",
+      17
+    ],
+    [
+      21,
+      "Maryn Rensi",
+      17
+    ],
+    [
+      21,
+      "Paul Davidson",
+      17
+    ],
+    [
+      28,
+      "Andrew Carson",
       16
     ],
     [
-      7,
-      "Cale Homesley",
+      28,
+      "Brent Johnson",
       16
     ],
     [
-      7,
+      28,
+      "Ellen Evans",
+      16
+    ],
+    [
+      28,
       "Eric Wood",
       16
     ],
     [
-      7,
-      "Hamilton Evans",
+      28,
+      "Jacob Bonnot",
       16
     ],
     [
-      7,
-      "John Martin",
-      16
-    ],
-    [
-      7,
-      "Noah Harris",
-      16
-    ],
-    [
-      7,
-      "Ryan Slamka",
-      16
-    ],
-    [
-      7,
-      "Sara Bonnot",
-      16
-    ],
-    [
-      7,
-      "Seiji Borja",
-      16
-    ],
-    [
-      16,
-      "Andrew Davis",
-      15
-    ],
-    [
-      16,
-      "Ellen Evans",
-      15
-    ],
-    [
-      16,
-      "John Stavrinakis",
-      15
-    ],
-    [
-      16,
-      "Lexi Winters",
-      15
-    ],
-    [
-      20,
-      "Andrew Rogerson",
-      14
-    ],
-    [
-      20,
-      "Bryan Pandajis",
-      14
-    ],
-    [
-      20,
-      "Colin Malone",
-      14
-    ],
-    [
-      20,
-      "Eric Collins",
-      14
-    ],
-    [
-      20,
-      "Joshua Manasco",
-      14
-    ],
-    [
-      20,
-      "Maryn Rensi",
-      14
-    ],
-    [
-      20,
-      "Paul Davidson",
-      14
-    ],
-    [
-      27,
-      "BJ Fife",
-      13
-    ],
-    [
-      27,
+      28,
       "Jared Weinstein",
-      13
+      16
     ],
     [
-      27,
-      "Jason Wiggam",
-      13
-    ],
-    [
-      27,
-      "Joseph Katke",
-      13
-    ],
-    [
-      27,
-      "Michael Badlam Sr",
-      13
-    ],
-    [
-      27,
-      "Ryan Smith",
-      13
-    ],
-    [
-      33,
-      "AJ Capitelli",
-      12
-    ],
-    [
-      33,
-      "Andrew Carson",
-      12
-    ],
-    [
-      33,
-      "Andrew Lichty",
-      12
-    ],
-    [
-      33,
-      "Andy Campbell",
-      12
-    ],
-    [
-      33,
-      "Dave Stone",
-      12
-    ],
-    [
-      33,
+      28,
       "John-Thomas Carson",
-      12
+      16
     ],
     [
-      33,
-      "Justin Mullinax",
-      12
+      28,
+      "Michael Badlam Sr",
+      16
     ],
     [
-      33,
-      "Kevin Morris",
-      12
+      28,
+      "Ryan Smith",
+      16
     ],
     [
-      41,
+      37,
       "Allison Morris",
-      11
+      15
     ],
     [
-      41,
-      "Brandon Myers",
-      11
+      37,
+      "Andrew Lichty",
+      15
     ],
     [
-      41,
-      "Brent Johnson",
-      11
+      37,
+      "Andy Campbell",
+      15
     ],
     [
-      41,
-      "Eric Nilsson",
-      11
-    ],
-    [
-      41,
+      37,
       "Jessica Davis",
-      11
+      15
     ],
     [
-      41,
-      "Michael Badlam Jr",
-      11
+      37,
+      "Justin Mullinax",
+      15
     ],
     [
-      41,
+      37,
+      "Kevin Morris",
+      15
+    ],
+    [
+      37,
       "Spencer Broome",
-      11
+      15
+    ],
+    [
+      44,
+      "BJ Fife",
+      14
+    ],
+    [
+      44,
+      "Dave Stone",
+      14
+    ],
+    [
+      44,
+      "Eric Nilsson",
+      14
+    ],
+    [
+      44,
+      "Michael Badlam Jr",
+      14
     ],
     [
       48,
-      "Jacob Bonnot",
-      10
+      "Brandon Myers",
+      13
     ],
     [
-      49,
+      48,
       "Ryan Lyles",
-      9
+      13
     ],
     [
       50,
@@ -673,618 +673,515 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       4
     ]
   ],
-  "weekGames": [
-    {
-      "key": "WISC-IOWA",
-      "kickoff": "2026-10-31T12:00:00-04:00",
-      "matchup": "#25 Wisconsin at Iowa"
-    },
-    {
-      "key": "SMU-SYR",
-      "kickoff": "2026-10-31T12:00:00-04:00",
-      "matchup": "#19 SMU at Syracuse"
-    },
-    {
-      "key": "ND-NAVY",
-      "kickoff": "2026-10-31T12:00:00-04:00",
-      "matchup": "#5 Notre Dame at Navy"
-    },
-    {
-      "key": "ARIZ-TTU",
-      "kickoff": "2026-10-31T12:00:00-04:00",
-      "matchup": "#22 Arizona at #13 Texas Tech"
-    },
-    {
-      "key": "AUB-MISS",
-      "kickoff": "2026-10-31T12:45:00-04:00",
-      "matchup": "Auburn at #12 Ole Miss"
-    },
-    {
-      "key": "FLA-UGA",
-      "kickoff": "2026-10-31T15:30:00-04:00",
-      "matchup": "#17 Florida vs. #3 Georgia"
-    },
-    {
-      "key": "MINN-IND",
-      "kickoff": "2026-10-31T15:30:00-04:00",
-      "matchup": "Minnesota at #4 Indiana"
-    },
-    {
-      "key": "NW-ORE",
-      "kickoff": "2026-10-31T15:30:00-04:00",
-      "matchup": "#20 Northwestern at Oregon"
-    },
-    {
-      "key": "ASU-BYU",
-      "kickoff": "2026-10-31T15:30:00-04:00",
-      "matchup": "Arizona State at #8 BYU"
-    },
-    {
-      "key": "UTAH-CIN",
-      "kickoff": "2026-10-31T15:45:00-04:00",
-      "matchup": "#6 Utah at Cincinnati"
-    },
-    {
-      "key": "UVA-WAKE",
-      "kickoff": "2026-10-31T15:45:00-04:00",
-      "matchup": "Virginia at #14 Wake Forest"
-    },
-    {
-      "key": "NEV-UCLA",
-      "kickoff": "2026-10-31T16:15:00-04:00",
-      "matchup": "Nevada at #7 UCLA"
-    },
-    {
-      "key": "OKST-ISU",
-      "kickoff": "2026-10-31T19:00:00-04:00",
-      "matchup": "#24 Oklahoma State at Iowa State"
-    },
-    {
-      "key": "MIA-UNC",
-      "kickoff": "2026-10-31T19:30:00-04:00",
-      "matchup": "#1 Miami at North Carolina"
-    },
-    {
-      "key": "MSST-TEX",
-      "kickoff": "2026-10-31T19:30:00-04:00",
-      "matchup": "Mississippi State at #11 Texas"
-    },
-    {
-      "key": "OSU-USC",
-      "kickoff": "2026-10-31T19:30:00-04:00",
-      "matchup": "#2 Ohio State at USC"
-    },
-    {
-      "key": "MIZ-ARK",
-      "kickoff": "2026-10-31T19:45:00-04:00",
-      "matchup": "#23 Missouri at Arkansas"
-    },
-    {
-      "key": "TXST-BSU",
-      "kickoff": "2026-10-31T22:00:00-04:00",
-      "matchup": "Texas State at #20 Boise State"
-    }
-  ],
+  "weekGames": [],
   "offBoardGames": [],
   "previousWeekRecap": {
-    "week": 8,
-    "winner": "Sara Bonnot",
+    "week": 9,
+    "winner": "Jason Wiggam",
     "winnerScore": "6-1",
-    "winnerDetail": "won the four-way six-win tiebreaker",
-    "specialNote": "Sara Bonnot, Scott Winters, Spencer Broome and Maryn Rensi all finished with six wins. Sara guessed 62 on the Ole Miss–Texas tiebreaker; the actual total was 61. Indiana–Michigan also produced the first push of the season: a push earns no win, no loss and no leaderboard point.",
+    "winnerDetail": "won the three-way six-win tiebreaker",
+    "specialNote": "Jason Wiggam, Jacob Bonnot and John Martin all went 6-1. The Arizona–Texas Tech tiebreaker finished at 60 points; Jason guessed 58, Jacob 55 and John 48. Andrew Rensi also officially wins the Halftime Adjustment mini-title with 24 wins across Weeks 5–9.",
     "poolKiller": {
-      "title": "Tennessee +2.5",
-      "detail": "28 casualties after South Carolina won 27-24"
+      "title": "Ohio State -6.5",
+      "detail": "25 casualties after USC won 30-18"
     },
     "poolHero": {
-      "title": "Kentucky -10.5 / Miami -20",
-      "detail": "18 winning cards each"
+      "title": "Georgia -11.5",
+      "detail": "20 winning cards in Georgia's 27-8 cover"
     },
     "biggestMover": {
-      "title": "Sara Bonnot ↑17",
-      "detail": "The weekly win moved Sara into a tie for 11th overall"
+      "title": "Brent Johnson ↑14",
+      "detail": "Moved up to T21 overall"
     },
     "poolAts": {
-      "title": "151-156 with 26 pushes",
-      "detail": "49.2% ATS on win/loss decisions; 3 late selections voided"
+      "title": "164-169",
+      "detail": "49.2% ATS on 333 valid selections; 3 selections voided"
     },
     "contrarian": {
-      "title": "Noah Harris",
-      "detail": "Average pick popularity: 5.9"
+      "title": "Spencer Broome",
+      "detail": "Average pick popularity: 5.4"
     },
     "chalk": {
-      "title": "Eric Nilsson",
-      "detail": "Average pick popularity: 18.3"
+      "title": "Jessica Davis",
+      "detail": "Average pick popularity: 17.0"
     },
     "scoreDistribution": {
+      "1-6": 3,
       "2-5": 5,
-      "6-1": 3,
-      "4-2-1P": 6,
-      "0-6-1P": 1,
-      "2-4-1P": 10,
-      "3-3-1P": 6,
-      "3-4": 3,
-      "4-3": 4,
-      "1-6": 2,
+      "3-2 + 2 VOID": 1,
+      "3-3 + 1 VOID": 1,
+      "3-4": 17,
+      "4-3": 14,
       "5-2": 4,
-      "6-0-1P": 1,
-      "1-5-1P": 1,
-      "5-1-1P": 1,
-      "2-2 + 3 VOID": 1
+      "6-1": 3
     },
     "distributionOrder": [
-      "6-0-1P",
       "6-1",
-      "5-1-1P",
       "5-2",
-      "4-2-1P",
       "4-3",
-      "3-3-1P",
+      "3-2 + 2 VOID",
+      "3-3 + 1 VOID",
       "3-4",
-      "2-2 + 3 VOID",
-      "2-4-1P",
       "2-5",
-      "1-5-1P",
-      "1-6",
-      "0-6-1P"
+      "1-6"
     ],
     "submission": "48 / 51 cards received",
     "titleRace": {
-      "summary": "Andrew Rensi leads at 21",
-      "detail": "Dan Ubilla and David Lasky are three back at 18 • one week remains"
+      "summary": "Andrew Rensi wins at 24",
+      "detail": "David Lasky and John Martin finish tied for second at 22"
     }
   },
-  "slateNote": "18 playable Week 9 games. Official pool lines are frozen.",
-  "lastUpdated": "Oct 27, 2026",
+  "slateNote": "Week 10 matchups and lines will populate once the new poll and board are ready.",
+  "lastUpdated": "Nov 1, 2026",
   "week7Tiebreaker": "#4 Ohio State at #5 Indiana",
   "dropAdjusted": [
     [
       1,
       "Andrew Rensi",
-      30,
-      34,
+      33,
+      37,
       "W3: 2, W4: 2",
       1,
-      8
+      9
     ],
     [
       2,
-      "Eric Wood",
-      29,
-      34,
-      "W6: 2, W4: 3",
-      1,
-      8
+      "John Martin",
+      32,
+      37,
+      "W4: 2, W3: 3",
+      0,
+      9
     ],
     [
-      2,
+      3,
       "Hamilton Evans",
-      29,
-      34,
-      "W8: 2, W3: 3",
+      32,
+      35,
+      "W9: 1, W8: 2",
       1,
-      8
+      9
     ],
     [
       4,
-      "Dan Ubilla",
-      28,
-      31,
-      "W4: 1, W3: 2",
-      0,
+      "Eric Wood",
+      32,
+      34,
+      "W9: 0, W6: 2",
+      1,
       8
     ],
     [
       5,
-      "Cale Homesley",
-      27,
-      33,
-      "W1: 3, W2: 3",
-      1,
-      8
+      "Noah Harris",
+      31,
+      38,
+      "W8: 3, W1: 4",
+      0,
+      9
     ],
     [
       6,
-      "Bryan Pandajis",
-      27,
+      "Cale Homesley",
       31,
-      "W5: 1, W3: 3",
-      0,
-      8
+      37,
+      "W1: 3, W2: 3",
+      1,
+      9
     ],
     [
       7,
-      "Noah Harris",
-      26,
-      33,
-      "W8: 3, W1: 4",
+      "Bryan Pandajis",
+      31,
+      35,
+      "W5: 1, W3: 3",
       0,
-      8
+      9
     ],
     [
       8,
-      "David Lasky",
-      26,
-      32,
-      "W1: 3, W2: 3",
-      2,
-      8
+      "Dan Ubilla",
+      31,
+      34,
+      "W4: 1, W3: 2",
+      0,
+      9
     ],
     [
       9,
-      "John Martin",
-      26,
-      31,
-      "W4: 2, W3: 3",
-      0,
-      8
-    ],
-    [
-      10,
-      "Berry Curlee",
-      26,
-      30,
-      "W1: 2, W3: 2",
-      1,
-      8
-    ],
-    [
-      10,
-      "Sara Bonnot",
-      26,
-      30,
-      "W3: 2, W5: 2",
-      1,
-      8
-    ],
-    [
-      10,
-      "Will Martin",
-      26,
-      30,
-      "W2: 2, W4: 2",
-      1,
-      8
-    ],
-    [
-      13,
-      "Andrew Davis",
-      26,
-      29,
-      "W8: 1, W4: 2",
-      0,
-      8
-    ],
-    [
-      13,
-      "Will Long",
-      26,
-      29,
-      "W3: 1, W1: 2",
-      0,
-      8
-    ],
-    [
-      15,
       "Joseph Katke",
-      26,
-      27,
+      31,
+      32,
       "W8: 0, W3: 1",
       0,
-      8
+      9
+    ],
+    [
+      10,
+      "David Lasky",
+      30,
+      36,
+      "W1: 3, W2: 3",
+      2,
+      9
+    ],
+    [
+      11,
+      "Will Martin",
+      30,
+      34,
+      "W2: 2, W4: 2",
+      1,
+      9
+    ],
+    [
+      12,
+      "Seiji Borja",
+      29,
+      35,
+      "W2: 3, W3: 3",
+      0,
+      9
+    ],
+    [
+      13,
+      "Scott Winters",
+      29,
+      34,
+      "W3: 2, W4: 3",
+      0,
+      9
+    ],
+    [
+      14,
+      "Andrew Davis",
+      29,
+      32,
+      "W8: 1, W4: 2",
+      0,
+      9
+    ],
+    [
+      14,
+      "Will Long",
+      29,
+      32,
+      "W3: 1, W1: 2",
+      0,
+      9
     ],
     [
       16,
-      "Seiji Borja",
-      25,
-      31,
-      "W2: 3, W3: 3",
-      0,
-      8
-    ],
-    [
-      17,
       "Ryan Smith",
-      25,
-      30,
+      28,
+      33,
       "W8: 2, W1: 3",
       0,
-      8
+      9
     ],
     [
       17,
-      "Scott Winters",
-      25,
-      30,
-      "W3: 2, W4: 3",
-      0,
-      8
+      "Berry Curlee",
+      28,
+      32,
+      "W1: 2, W3: 2",
+      1,
+      9
+    ],
+    [
+      17,
+      "Sara Bonnot",
+      28,
+      32,
+      "W3: 2, W5: 2",
+      1,
+      9
     ],
     [
       19,
       "Eric Nilsson",
-      25,
       28,
+      31,
       "W7: 1, W3: 2",
       1,
-      8
+      9
     ],
     [
       20,
-      "John Stavrinakis",
-      25,
+      "Brent Johnson",
       28,
-      "W4: 1, W8: 2",
+      31,
+      "W8: 1, W2: 2",
       0,
-      8
+      9
     ],
     [
-      21,
-      "Maryn Rensi",
-      25,
-      27,
-      "W7: 0, W4: 2",
+      20,
+      "Spencer Broome",
+      28,
+      31,
+      "W7: 1, W2: 2",
       0,
-      7
+      9
     ],
     [
       22,
-      "Lexi Winters",
-      24,
+      "Maryn Rensi",
       28,
-      "W1: 2, W4: 2",
+      30,
+      "W7: 0, W4: 2",
       0,
       8
     ],
     [
       23,
-      "Michael Badlam Jr",
-      24,
-      27,
-      "W5: 1, W8: 2",
-      0,
-      8
-    ],
-    [
-      23,
-      "Spencer Broome",
-      24,
-      27,
-      "W7: 1, W2: 2",
-      0,
-      8
-    ],
-    [
-      25,
-      "Ellen Evans",
-      23,
-      29,
-      "W1: 3, W3: 3",
-      0,
-      8
-    ],
-    [
-      25,
-      "Ryan Slamka",
-      23,
-      29,
-      "W2: 3, W3: 3",
-      0,
-      8
-    ],
-    [
-      27,
-      "Colin Malone",
-      23,
-      28,
-      "W6: 2, W2: 3",
-      0,
-      8
-    ],
-    [
-      28,
       "Andrew Carson",
-      23,
       27,
+      31,
       "W2: 2, W3: 2",
       0,
-      8
+      9
     ],
     [
-      28,
+      23,
       "Andrew Rogerson",
-      23,
       27,
+      31,
       "W3: 2, W7: 2",
       0,
-      8
+      9
     ],
     [
-      28,
-      "Dave Stone",
       23,
-      27,
-      "W3: 2, W7: 2",
-      0,
-      8
-    ],
-    [
-      28,
       "Eric Collins",
-      23,
       27,
+      31,
       "W1: 2, W3: 2",
       0,
-      8
+      9
     ],
     [
-      28,
-      "John-Thomas Carson",
       23,
+      "John-Thomas Carson",
       27,
+      31,
       "W2: 2, W6: 2",
       0,
-      8
+      9
+    ],
+    [
+      23,
+      "Lexi Winters",
+      27,
+      31,
+      "W1: 2, W4: 2",
+      0,
+      9
     ],
     [
       28,
-      "Michael Badlam Sr",
-      23,
+      "John Stavrinakis",
       27,
-      "W1: 2, W5: 2",
-      0,
-      8
-    ],
-    [
-      34,
-      "Brent Johnson",
-      23,
-      26,
-      "W8: 1, W2: 2",
-      0,
-      8
-    ],
-    [
-      34,
-      "Jared Weinstein",
-      23,
-      26,
+      30,
       "W4: 1, W8: 2",
       0,
-      8
+      9
+    ],
+    [
+      28,
+      "Michael Badlam Jr",
+      27,
+      30,
+      "W5: 1, W8: 2",
+      0,
+      9
+    ],
+    [
+      30,
+      "Ryan Slamka",
+      26,
+      32,
+      "W2: 3, W3: 3",
+      0,
+      9
+    ],
+    [
+      31,
+      "Colin Malone",
+      26,
+      31,
+      "W6: 2, W2: 3",
+      0,
+      9
+    ],
+    [
+      32,
+      "AJ Capitelli",
+      26,
+      30,
+      "W3: 2, W7: 2",
+      0,
+      9
+    ],
+    [
+      32,
+      "Allison Morris",
+      26,
+      30,
+      "W3: 2, W8: 2",
+      0,
+      9
+    ],
+    [
+      32,
+      "Ellen Evans",
+      26,
+      30,
+      "W9: 1, W1: 3",
+      0,
+      9
+    ],
+    [
+      32,
+      "Michael Badlam Sr",
+      26,
+      30,
+      "W1: 2, W5: 2",
+      0,
+      9
     ],
     [
       36,
-      "Kevin Morris",
-      23,
+      "Jacob Bonnot",
       26,
+      29,
+      "W8: 1, W3: 2",
+      0,
+      9
+    ],
+    [
+      36,
+      "Jared Weinstein",
+      26,
+      29,
+      "W4: 1, W8: 2",
+      0,
+      9
+    ],
+    [
+      38,
+      "Kevin Morris",
+      26,
+      29,
       "W8: 0, W2: 3",
       0,
-      7
-    ],
-    [
-      37,
-      "Joshua Manasco",
-      23,
-      25,
-      "W3: 0, W4: 2",
-      0,
-      7
-    ],
-    [
-      37,
-      "Justin Mullinax",
-      23,
-      25,
-      "W6: 0, W1: 2",
-      0,
-      7
+      8
     ],
     [
       39,
+      "Joshua Manasco",
+      26,
+      28,
+      "W3: 0, W4: 2",
+      0,
+      8
+    ],
+    [
+      39,
+      "Justin Mullinax",
+      26,
+      28,
+      "W6: 0, W1: 2",
+      0,
+      8
+    ],
+    [
+      41,
       "Paul Davidson",
-      22,
-      27,
+      25,
+      30,
       "W2: 2, W3: 3",
       0,
-      8
-    ],
-    [
-      40,
-      "Allison Morris",
-      22,
-      26,
-      "W3: 2, W8: 2",
-      0,
-      8
-    ],
-    [
-      40,
-      "Andrew Lichty",
-      22,
-      26,
-      "W2: 2, W3: 2",
-      0,
-      8
+      9
     ],
     [
       42,
-      "AJ Capitelli",
-      21,
+      "Andrew Lichty",
       25,
+      29,
+      "W2: 2, W3: 2",
+      0,
+      9
+    ],
+    [
+      42,
+      "Dave Stone",
+      25,
+      29,
       "W3: 2, W7: 2",
       0,
-      8
+      9
     ],
     [
-      43,
-      "BJ Fife",
-      21,
-      24,
-      "W4: 1, W2: 2",
-      0,
-      8
+      44,
+      "Jason Wiggam",
+      25,
+      28,
+      "W3: 1, W1: 2",
+      1,
+      9
     ],
     [
-      43,
-      "Brandon Myers",
-      21,
-      24,
-      "W3: 1, W6: 2",
-      0,
-      8
-    ],
-    [
-      43,
+      45,
       "Ryan Lyles",
-      21,
-      24,
+      25,
+      28,
       "W5: 1, W3: 2",
       0,
-      8
+      9
     ],
     [
       46,
-      "Jacob Bonnot",
-      20,
+      "Jessica Davis",
       23,
-      "W8: 1, W3: 2",
+      27,
+      "W3: 2, W4: 2",
       0,
-      8
+      9
     ],
     [
       47,
-      "Jessica Davis",
-      19,
+      "Brandon Myers",
       23,
-      "W3: 2, W4: 2",
+      26,
+      "W3: 1, W6: 2",
       0,
-      8
+      9
     ],
     [
       48,
-      "Jason Wiggam",
-      19,
-      22,
-      "W3: 1, W1: 2",
+      "BJ Fife",
+      23,
+      25,
+      "W4: 1, W9: 1",
       0,
-      8
+      9
     ],
     [
       49,
       "Andy Campbell",
-      18,
-      22,
+      21,
+      25,
       "W1: 2, W3: 2",
       0,
-      8
+      9
     ],
     [
       50,
       "Jesse Moody",
-      18,
       19,
-      "W8: 0, W6: 1",
+      19,
+      "W8: 0, W9: 0",
       0,
       7
     ],
@@ -1297,6 +1194,5 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       0,
       2
     ]
-  ],
-  "week9Tiebreaker": "#22 Arizona at #13 Texas Tech"
+  ]
 });
