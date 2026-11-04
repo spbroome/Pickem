@@ -673,8 +673,94 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       4
     ]
   ],
-  "weekGames": [],
-  "offBoardGames": [],
+  "weekGames": [
+    {
+      "key": "NMEX-NEV",
+      "kickoff": "2026-11-06T21:00:00-05:00",
+      "matchup": "#22 New Mexico at Nevada"
+    },
+    {
+      "key": "TCU-ARIZ",
+      "kickoff": "2026-11-06T22:15:00-05:00",
+      "matchup": "TCU at #24 Arizona"
+    },
+    {
+      "key": "UCLA-MINN",
+      "kickoff": "2026-11-07T12:00:00-05:00",
+      "matchup": "#5 UCLA at Minnesota"
+    },
+    {
+      "key": "BYU-UTAH",
+      "kickoff": "2026-11-07T12:00:00-05:00",
+      "matchup": "#7 BYU at #3 Utah"
+    },
+    {
+      "key": "TEX-MIZ",
+      "kickoff": "2026-11-07T12:00:00-05:00",
+      "matchup": "#10 Texas at #19 Missouri"
+    },
+    {
+      "key": "TAMU-SC",
+      "kickoff": "2026-11-07T15:00:00-05:00",
+      "matchup": "Texas A&M at #23 South Carolina"
+    },
+    {
+      "key": "BAMA-LSU",
+      "kickoff": "2026-11-07T15:30:00-05:00",
+      "matchup": "#9 Alabama at #15 LSU"
+    },
+    {
+      "key": "CIN-HOU",
+      "kickoff": "2026-11-07T15:30:00-05:00",
+      "matchup": "Cincinnati at #17 Houston"
+    },
+    {
+      "key": "ORE-OSU",
+      "kickoff": "2026-11-07T15:30:00-05:00",
+      "matchup": "Oregon at #11 Ohio State"
+    },
+    {
+      "key": "BSU-CSU",
+      "kickoff": "2026-11-07T18:00:00-05:00",
+      "matchup": "#20 Boise State at Colorado State"
+    },
+    {
+      "key": "UK-TENN",
+      "kickoff": "2026-11-07T18:15:00-05:00",
+      "matchup": "#8 Kentucky at #16 Tennessee"
+    },
+    {
+      "key": "MIA-ND",
+      "kickoff": "2026-11-07T19:30:00-05:00",
+      "matchup": "#1 Miami at #4 Notre Dame"
+    },
+    {
+      "key": "UGA-MISS",
+      "kickoff": "2026-11-07T19:30:00-05:00",
+      "matchup": "#2 Georgia at #12 Ole Miss"
+    },
+    {
+      "key": "IOWA-NW",
+      "kickoff": "2026-11-07T19:30:00-05:00",
+      "matchup": "#21 Iowa at Northwestern"
+    },
+    {
+      "key": "OU-FLA",
+      "kickoff": "2026-11-07T19:45:00-05:00",
+      "matchup": "Oklahoma at #25 Florida"
+    },
+    {
+      "key": "WVU-TTU",
+      "kickoff": "2026-11-07T21:30:00-05:00",
+      "matchup": "West Virginia at #13 Texas Tech"
+    }
+  ],
+  "offBoardGames": [
+    {
+      "matchup": "Merrimack at #14 Wake Forest",
+      "reason": "No broadly available market spread posted at freeze."
+    }
+  ],
   "previousWeekRecap": {
     "week": 9,
     "winner": "Jason Wiggam",
@@ -731,8 +817,8 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "detail": "David Lasky and John Martin finish tied for second at 22"
     }
   },
-  "slateNote": "Week 10 matchups and lines will populate once the new poll and board are ready.",
-  "lastUpdated": "Nov 1, 2026",
+  "slateNote": "16 playable Week 10 games. #14 Wake Forest–Merrimack is off the board because no broadly available market spread was posted at freeze. Official pool lines are frozen.",
+  "lastUpdated": "Nov 3, 2026",
   "week7Tiebreaker": "#4 Ohio State at #5 Indiana",
   "dropAdjusted": [
     [
@@ -1194,5 +1280,7 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       0,
       2
     ]
-  ]
-});
+  ],
+  "week10Tiebreaker": "#1 Miami at #4 Notre Dame"
+}
+);
