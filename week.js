@@ -623,7 +623,133 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       0
     ]
   ],
-  "weekGames": [],
+  "weekGames": [
+    {
+      "key": "ORE-MSU",
+      "kickoff": "2026-11-20T20:00:00-05:00",
+      "matchup": "#14 Oregon at Michigan State"
+    },
+    {
+      "key": "MEM-NAVY",
+      "kickoff": "2026-11-21T12:00:00-05:00",
+      "matchup": "#24 Memphis at Navy"
+    },
+    {
+      "key": "WOFF-MISS",
+      "kickoff": "2026-11-21T12:00:00-05:00",
+      "matchup": "Wofford at #25 Ole Miss"
+    },
+    {
+      "key": "WAKE-GT",
+      "kickoff": "2026-11-21T12:00:00-05:00",
+      "matchup": "#10 Wake Forest at Georgia Tech"
+    },
+    {
+      "key": "OSU-NEB",
+      "kickoff": "2026-11-21T12:00:00-05:00",
+      "matchup": "#16 Ohio State at Nebraska"
+    },
+    {
+      "key": "BYU-KAN",
+      "kickoff": "2026-11-21T12:00:00-05:00",
+      "matchup": "#12 BYU at Kansas"
+    },
+    {
+      "key": "VAN-FLA",
+      "kickoff": "2026-11-21T12:00:00-05:00",
+      "matchup": "Vanderbilt at #23 Florida"
+    },
+    {
+      "key": "HOU-WVU",
+      "kickoff": "2026-11-21T13:00:00-05:00",
+      "matchup": "#20 Houston at West Virginia"
+    },
+    {
+      "key": "WKU-LIB",
+      "kickoff": "2026-11-21T13:00:00-05:00",
+      "matchup": "Western Kentucky at #22 Liberty"
+    },
+    {
+      "key": "CHAT-BAMA",
+      "kickoff": "2026-11-21T14:00:00-05:00",
+      "matchup": "Chattanooga at #7 Alabama"
+    },
+    {
+      "key": "IOWA-ILL",
+      "kickoff": "2026-11-21T14:30:00-05:00",
+      "matchup": "#13 Iowa at Illinois"
+    },
+    {
+      "key": "TTU-BAY",
+      "kickoff": "2026-11-21T15:30:00-05:00",
+      "matchup": "#11 Texas Tech at Baylor"
+    },
+    {
+      "key": "UCLA-MICH",
+      "kickoff": "2026-11-21T15:30:00-05:00",
+      "matchup": "#4 UCLA at Michigan"
+    },
+    {
+      "key": "LSU-TENN",
+      "kickoff": "2026-11-21T15:30:00-05:00",
+      "matchup": "LSU at #9 Tennessee"
+    },
+    {
+      "key": "IND-WASH",
+      "kickoff": "2026-11-21T15:30:00-05:00",
+      "matchup": "#6 Indiana at Washington"
+    },
+    {
+      "key": "ARK-TEX",
+      "kickoff": "2026-11-21T15:30:00-05:00",
+      "matchup": "Arkansas at #8 Texas"
+    },
+    {
+      "key": "MD-USC",
+      "kickoff": "2026-11-21T18:15:00-05:00",
+      "matchup": "Maryland at #18 USC"
+    },
+    {
+      "key": "VT-MIA",
+      "kickoff": "2026-11-21T19:00:00-05:00",
+      "matchup": "Virginia Tech at #5 Miami"
+    },
+    {
+      "key": "ARIZ-KSU",
+      "kickoff": "2026-11-21T19:00:00-05:00",
+      "matchup": "#19 Arizona at Kansas State"
+    },
+    {
+      "key": "UK-MIZZ",
+      "kickoff": "2026-11-21T19:30:00-05:00",
+      "matchup": "#17 Kentucky at Missouri"
+    },
+    {
+      "key": "UGA-SC",
+      "kickoff": "2026-11-21T19:30:00-05:00",
+      "matchup": "#1 Georgia at South Carolina"
+    },
+    {
+      "key": "SMU-ND",
+      "kickoff": "2026-11-21T19:30:00-05:00",
+      "matchup": "SMU at #3 Notre Dame"
+    },
+    {
+      "key": "PITT-LVILLE",
+      "kickoff": "2026-11-21T19:30:00-05:00",
+      "matchup": "Pittsburgh at #21 Louisville"
+    },
+    {
+      "key": "UTAH-TCU",
+      "kickoff": "2026-11-21T21:00:00-05:00",
+      "matchup": "#2 Utah at TCU"
+    },
+    {
+      "key": "SDSU-BOISE",
+      "kickoff": "2026-11-21T21:30:00-05:00",
+      "matchup": "San Diego State at #15 Boise State"
+    }
+  ],
   "offBoardGames": [],
   "previousWeekRecap": {
     "week": 11,
@@ -685,8 +811,8 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "detail": "Hail Mary leader after Week 11. Eight players are one back at 9."
     }
   },
-  "slateNote": "Week 12 slate coming next.",
-  "lastUpdated": "Nov 15, 2026",
+  "slateNote": "25 playable Week 12 games — every AP Top 25 team is on its own matchup this week. Official pool lines are frozen.",
+  "lastUpdated": "Nov 18, 2026",
   "week7Tiebreaker": "#4 Ohio State at #5 Indiana",
   "dropAdjusted": [
     [
@@ -1149,6 +1275,7 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       2
     ]
   ],
-  "week11Tiebreaker": "#2 Utah at #22 Arizona"
+  "week11Tiebreaker": "#2 Utah at #22 Arizona",
+  "week12Tiebreaker": "#1 Georgia at South Carolina"
 }
 );
