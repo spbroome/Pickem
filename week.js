@@ -623,7 +623,123 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       0
     ]
   ],
-  "weekGames": [],
+  "weekGames": [
+    {
+      "key": "TCU-TTU",
+      "kickoff": "2026-11-26T20:00:00-05:00",
+      "matchup": "TCU at #9 Texas Tech"
+    },
+    {
+      "key": "NEB-IOWA",
+      "kickoff": "2026-11-27T12:00:00-05:00",
+      "matchup": "Nebraska at #13 Iowa"
+    },
+    {
+      "key": "MSST-MISS",
+      "kickoff": "2026-11-27T12:00:00-05:00",
+      "matchup": "Mississippi State at #23 Ole Miss"
+    },
+    {
+      "key": "FLA-FSU",
+      "kickoff": "2026-11-27T15:30:00-05:00",
+      "matchup": "#20 Florida at Florida State"
+    },
+    {
+      "key": "TEX-TAMU",
+      "kickoff": "2026-11-27T19:30:00-05:00",
+      "matchup": "#5 Texas at Texas A&M"
+    },
+    {
+      "key": "WVU-UTAH",
+      "kickoff": "2026-11-27T21:00:00-05:00",
+      "matchup": "West Virginia at #2 Utah"
+    },
+    {
+      "key": "ND-SYR",
+      "kickoff": "2026-11-28T12:00:00-05:00",
+      "matchup": "#3 Notre Dame at Syracuse"
+    },
+    {
+      "key": "MICH-OSU",
+      "kickoff": "2026-11-28T12:00:00-05:00",
+      "matchup": "Michigan at #25 Ohio State"
+    },
+    {
+      "key": "LOU-UK",
+      "kickoff": "2026-11-28T12:00:00-05:00",
+      "matchup": "#18 Louisville at Kentucky"
+    },
+    {
+      "key": "BC-MIA",
+      "kickoff": "2026-11-28T12:00:00-05:00",
+      "matchup": "Boston College at #4 Miami"
+    },
+    {
+      "key": "LIB-MOSU",
+      "kickoff": "2026-11-28T14:00:00-05:00",
+      "matchup": "#21 Liberty at Missouri State"
+    },
+    {
+      "key": "USC-UCLA",
+      "kickoff": "2026-11-28T15:30:00-05:00",
+      "matchup": "#15 USC at #10 UCLA"
+    },
+    {
+      "key": "GT-UGA",
+      "kickoff": "2026-11-28T15:30:00-05:00",
+      "matchup": "Georgia Tech at #1 Georgia"
+    },
+    {
+      "key": "DUKE-WAKE",
+      "kickoff": "2026-11-28T15:30:00-05:00",
+      "matchup": "Duke at #8 Wake Forest"
+    },
+    {
+      "key": "CIN-BYU",
+      "kickoff": "2026-11-28T15:30:00-05:00",
+      "matchup": "Cincinnati at #11 BYU"
+    },
+    {
+      "key": "OU-MIZZ",
+      "kickoff": "2026-11-28T16:15:00-05:00",
+      "matchup": "#19 Oklahoma at #24 Missouri"
+    },
+    {
+      "key": "BOISE-CSU",
+      "kickoff": "2026-11-28T18:00:00-05:00",
+      "matchup": "#22 Boise State at Colorado State"
+    },
+    {
+      "key": "TENN-VAN",
+      "kickoff": "2026-11-28T19:00:00-05:00",
+      "matchup": "#7 Tennessee at Vanderbilt"
+    },
+    {
+      "key": "PUR-IND",
+      "kickoff": "2026-11-28T19:00:00-05:00",
+      "matchup": "Purdue at #12 Indiana"
+    },
+    {
+      "key": "WASH-ORE",
+      "kickoff": "2026-11-28T19:30:00-05:00",
+      "matchup": "Washington at #14 Oregon"
+    },
+    {
+      "key": "AUB-BAMA",
+      "kickoff": "2026-11-28T19:30:00-05:00",
+      "matchup": "Auburn at #6 Alabama"
+    },
+    {
+      "key": "ASU-ARIZ",
+      "kickoff": "2026-11-28T21:00:00-05:00",
+      "matchup": "Arizona State at #16 Arizona"
+    },
+    {
+      "key": "BAY-HOU",
+      "kickoff": "2026-11-28T21:30:00-05:00",
+      "matchup": "Baylor at #17 Houston"
+    }
+  ],
   "offBoardGames": [],
   "previousWeekRecap": {
     "week": 12,
@@ -691,7 +807,7 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
       "detail": "Hail Mary co-leaders after Week 12. Eligibility remains locked to players outside the raw Top 10 after Week 9."
     }
   },
-  "slateNote": "Week 13 slate coming next.",
+  "slateNote": "23 playable Week 13 games — rivalry week. Official pool lines are frozen.",
   "lastUpdated": "Nov 22, 2026",
   "week7Tiebreaker": "#4 Ohio State at #5 Indiana",
   "dropAdjusted": [
@@ -1156,6 +1272,7 @@ window.PICKEM_DATA = Object.assign(window.PICKEM_DATA || {}, {
     ]
   ],
   "week11Tiebreaker": "#2 Utah at #22 Arizona",
-  "week12Tiebreaker": "#1 Georgia at South Carolina"
+  "week12Tiebreaker": "#1 Georgia at South Carolina",
+  "week13Tiebreaker": "#15 USC at #10 UCLA"
 }
 );
